@@ -1,0 +1,2706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antonia's Learning and Beauty Centre | Kimanya - Masaka</title>
+  <meta name="description" content="Where beauty meets elegancy. Professional hairdressing, makeup, bridal styling, nail care, eyelashes, jewelry, and salon management skilling for empowering women in Masaka, Uganda.">
+  <meta name="keywords" content="Salon Masaka, Hairdressing Uganda, Makeup Kimanya, Beauty School Masaka, Antonia Beauty Salon">
+
+  <!-- ADDED: Favicon (uses the school badge colors) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23ffffff' stroke='%231d3557' stroke-width='4'/%3E%3Ctext x='50' y='58' font-size='40' text-anchor='middle' fill='%23d4af37'%3EA%3C/text%3E%3C/svg%3E">
+
+  <!-- ADDED: Open Graph / Social Share Tags -->
+  <meta property="og:title" content="Antonia's Learning and Beauty Centre | Kimanya - Masaka">
+  <meta property="og:description" content="Where beauty meets elegancy. Professional hairdressing, makeup, bridal styling, nail care, eyelashes, jewelry, and salon management skilling for empowering women in Masaka, Uganda.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#d4af37">
+
+  <!-- ADDED: Local Business structured data for better Google search results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Antonia's Learning and Beauty Centre",
+    "image": "assets/badge.jpeg",
+    "telephone": "+256705505474",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kimanya - Masaka",
+      "addressCountry": "UG"
+    },
+    "openingHours": "Mo-Sa 08:00-19:00"
+  }
+  </script>
+
+  <!-- Font Awesome Icons & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- CSS VARIABLES & THEMES --- */
+    :root {
+      --primary: #d4af37; /* Gold accent */
+      --primary-hover: #b89628;
+      --secondary: #e91e63; /* Elegant pink */
+      --bg-color: #ffffff;
+      --surface-color: #f8f9fa;
+      --text-color: #222222;
+      --text-muted: #666666;
+      --border-color: #e0e0e0;
+      --card-bg: #ffffff;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --surface-color: #1e1e1e;
+      --text-color: #f0f0f0;
+      --text-muted: #aaa;
+      --border-color: #333333;
+      --card-bg: #1e1e1e;
+      --shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    /* --- BASE STYLES --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: var(--transition);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .brand-font {
+      font-family: 'Playfair Display', serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-padding {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    /* SLOW BOUNCE-IN ANIMATION */
+    .bounce-in {
+      opacity: 0;
+      transform: translateY(-50px);
+      transition: transform 1.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 1.6s ease;
+    }
+
+    .bounce-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* --- NAVIGATION --- */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: var(--transition);
+    }
+
+    [data-theme="dark"] header {
+      background-color: rgba(18, 18, 18, 0.95);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+    }
+
+    .badge-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* UPDATED: School Badge Styling — now a real photo, kept clearly visible */
+    .school-badge-svg {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      background: #ffffff;
+      border-radius: 50%;
+      border: 2px solid var(--primary);
+      box-shadow: 0 2px 6px rgba(212, 175, 55, 0.4);
+      flex-shrink: 0;
+      padding: 2px;
+    }
+
+    .brand-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-color);
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .theme-toggle {
+      background: none;
+      border: 2px solid var(--primary);
+      color: var(--text-color);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: var(--transition);
+      z-index: 1001;
+    }
+
+    .theme-toggle:hover {
+      background-color: var(--primary);
+      color: #fff;
+    }
+
+    .mobile-controls {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--text-color);
+      width: 30px;
+      text-align: center;
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+      overflow: hidden;
+      padding-top: 60px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      z-index: -2;
+    }
+
+    .hero-bg.active {
+      opacity: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.48) 100%);
+      z-index: -1;
+    }
+
+    /* ADDED: scrolling description ticker — sits between the fixed nav and the ANTONIAS title */
+    .hero-desc-track-wrap {
+      width: 100%;
+      overflow: hidden;
+      padding: 4px 0 16px;
+    }
+
+    .hero-desc-track {
+      display: flex;
+      width: max-content;
+      animation: heroDescScroll 22s linear infinite;
+    }
+
+    .hero-desc-track span {
+      display: inline-block;
+      padding-right: 90px;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+    }
+
+    @keyframes heroDescScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @media (max-width: 600px) {
+      .hero-desc-track span { font-size: 0.8rem; padding-right: 50px; }
+    }
+
+    /* Manual Slider Navigation Controls (< and >) */
+    .hero-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      border: 2px solid var(--primary);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 10;
+      transition: var(--transition);
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-arrow:hover {
+      background: var(--primary);
+      color: #000;
+    }
+
+    .hero-arrow-left { left: 20px; }
+    .hero-arrow-right { right: 20px; }
+
+    .hero-content {
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .hero-title-main {
+      font-size: 4rem;
+      letter-spacing: 4px;
+      color: var(--primary);
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+      margin-bottom: 5px;
+    }
+
+    .typewriter-container {
+      font-size: 1.8rem;
+      font-weight: 300;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 3px;
+      background-color: var(--primary);
+      margin-left: 5px;
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .hero-motto {
+      font-style: italic;
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      color: #f5f5f5;
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.65);
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #000;
+      border: 2px solid var(--primary);
+    }
+
+    .btn-primary:hover {
+      background-color: transparent;
+      color: var(--primary);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+
+    .btn-secondary:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* --- SERVICES SECTION --- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .service-img-wrapper {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .service-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-card:hover .service-img {
+      transform: scale(1.05);
+    }
+
+    .service-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: var(--secondary);
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .service-info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .service-info h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .service-info p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .view-more-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .hidden-service {
+      display: none;
+    }
+
+    /* --- KEY FEATURES SECTION --- */
+    .features-bg {
+      background-color: var(--surface-color);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .feature-card {
+      background-color: var(--card-bg);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+    }
+
+    .feature-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin: 0 auto 20px;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 12px;
+    }
+
+    /* --- ADDED: OUR CHALLENGES SECTION --- */
+    .challenges-section {
+      position: relative;
+      background-image: linear-gradient(rgba(8,16,32,0.55), rgba(8,16,32,0.62)), url('assets/badge.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #ffffff;
+      padding: 80px 0;
+    }
+
+    @media (max-width: 900px) {
+      .challenges-section { background-attachment: scroll; }
+    }
+
+    .challenges-section .section-title h2 { color: var(--primary); }
+    .challenges-section .section-title p { color: #eee; max-width: 750px; margin: 0 auto; }
+
+    .challenges-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .challenge-card {
+      background: rgba(20,20,30,0.35);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 12px;
+      padding: 28px 24px;
+    }
+
+    .challenge-card .challenge-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.2);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+    }
+
+    .challenge-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+      color: #fff;
+    }
+
+    .challenge-card p {
+      color: #ddd;
+      font-size: 0.95rem;
+    }
+
+    .challenges-cta {
+      text-align: center;
+      margin-top: 45px;
+    }
+
+    .challenges-cta p {
+      color: #eee;
+      margin-bottom: 18px;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .support-btn {
+      background-color: #1565d8;
+      border: 2px solid #1565d8;
+      color: #fff;
+      font-size: 1.05rem;
+    }
+
+    .support-btn:hover {
+      background-color: transparent;
+      color: #4d94ff;
+      border-color: #4d94ff;
+    }
+
+    .nav-support-link {
+      background: #1565d8;
+      color: #fff !important;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .nav-support-link:hover { color: #fff !important; opacity: 0.9; }
+
+    /* --- ADDED: SUPPORT / CONTRIBUTE MODAL --- */
+    .support-modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: 3000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .support-modal-backdrop.active {
+      display: flex;
+    }
+
+    .support-modal {
+      background: var(--card-bg);
+      color: var(--text-color);
+      border-radius: 14px;
+      max-width: 460px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 28px 24px;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    }
+
+    .support-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+
+    .support-modal h3 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      padding-right: 20px;
+      line-height: 1.4;
+    }
+
+    .support-tabs {
+      display: flex;
+      border-bottom: 2px solid var(--border-color);
+      margin-bottom: 18px;
+    }
+
+    /* ADDED: official provider colours, matching tashintech.github.io/payment-trial */
+    .support-modal {
+      --mtn-yellow: #ffcc00;
+      --mtn-yellow-text: #806600;
+      --airtel-red: #e60000;
+      --bank-blue: #003366;
+      --wa-green: #25d366;
+    }
+
+    .support-tab-btn {
+      flex: 1;
+      padding: 10px;
+      background: none;
+      border: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: var(--text-muted);
+      border-bottom: 3px solid transparent;
+    }
+
+    /* Default (unused) active fallback */
+    .support-tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    /* Provider-specific active colours — tab turns that provider's official colour when selected */
+    .support-tab-btn[data-provider="mtn"].active {
+      color: var(--mtn-yellow-text);
+      border-bottom-color: var(--mtn-yellow);
+    }
+
+    .support-tab-btn[data-provider="airtel"].active {
+      color: var(--airtel-red);
+      border-bottom-color: var(--airtel-red);
+    }
+
+    .support-tab-btn[data-provider="bank"].active {
+      color: var(--bank-blue);
+      border-bottom-color: var(--bank-blue);
+    }
+
+    .support-tab-content { display: none; }
+    .support-tab-content.active { display: block; }
+
+    .support-tab-content .form-group { margin-bottom: 14px; }
+
+    .support-ussd-box {
+      padding: 12px;
+      border-radius: 6px;
+      text-align: center;
+      font-family: monospace;
+      font-size: 1.05rem;
+      font-weight: bold;
+      margin: 12px 0;
+      background: var(--surface-color);
+      border: 1px dashed var(--primary);
+      color: var(--text-color);
+    }
+
+    .support-ussd-box.ussd-mtn {
+      background: #fffdf0;
+      border: 1px dashed #cca300;
+      color: var(--mtn-yellow-text);
+    }
+
+    .support-ussd-box.ussd-airtel {
+      background: #fff5f5;
+      border: 1px dashed var(--airtel-red);
+      color: var(--airtel-red);
+    }
+
+    .support-modal .btn-block {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    /* Buttons take on each provider's official colour */
+    .btn-pay-mtn { background: var(--mtn-yellow); color: #000; }
+    .btn-pay-airtel { background: var(--airtel-red); color: #fff; }
+    .btn-pay-bank { background: var(--bank-blue); color: #fff; }
+    .btn-pay-wa { background: var(--wa-green); color: #fff; }
+    .btn-pay-copy { background: #6c757d; color: #fff; }
+
+    .support-bank-details {
+      background: var(--surface-color);
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+      border-left: 4px solid var(--bank-blue);
+    }
+
+    .support-bank-details p { margin: 6px 0; }
+
+    .support-hint-text {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      display: block;
+      margin-top: 4px;
+    }
+
+    .support-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* --- ABOUT US SECTION --- */
+    .about-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-img-box {
+      position: relative;
+    }
+
+    .about-img-box img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-experience-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--primary);
+      color: #000;
+      padding: 20px;
+      border-radius: 12px;
+      font-weight: bold;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+ 
+    .about-text h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    .about-text p {
+      margin-bottom: 15px;
+      color: var(--text-muted);
+    }
+
+    /* --- TESTIMONIALS SECTION --- */
+    .testimonials-bg {
+      background-color: var(--surface-color);
+      overflow: hidden;
+    }
+
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding: 20px 0;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 30px;
+      width: max-content;
+      animation: scroll 55s linear infinite; /* UPDATED: slowed down for 7 cards */
+    }
+
+    /* ADDED: subheading under the Testimonials title */
+    .testimonials-subheading {
+      max-width: 800px;
+      margin: 0 auto 10px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    /* ADDED: badge label distinguishing student stories from client testimonials */
+    .testimonial-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--primary);
+    }
+
+    .testimonial-tag.tag-client {
+      background: rgba(233, 30, 99, 0.15);
+      color: var(--secondary);
+    }
+
+    .marquee-track:hover, .marquee-track.paused {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .testimonial-card {
+      width: 350px;
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .testimonial-card::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 30px;
+      border-width: 10px 10px 0;
+      border-style: solid;
+      border-color: var(--card-bg) transparent;
+      display: block;
+      width: 0;
+    }
+
+    .client-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    /* UPDATED: replaced photo avatars with initials for privacy + trust */
+    .client-initials {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+    }
+
+    /* --- ADDED: OUR GALLERY SECTION --- */
+    .gallery-subtitle {
+      text-align: center;
+      font-size: 1.3rem;
+      color: var(--text-color);
+      margin: 10px 0 20px;
+    }
+
+    .gallery-photos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-photo-item {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      aspect-ratio: 4 / 3;
+    }
+
+    .gallery-photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+
+    .gallery-photo-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-view-all {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .gallery-videos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .gallery-video-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #000;
+      border: 1px solid var(--border-color);
+    }
+
+    .gallery-video-item video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      background: #000;
+    }
+
+    /* --- FAQ SECTION --- */
+    .faq-accordion {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 20px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .faq-question.active {
+      color: var(--primary);
+      background-color: rgba(212, 175, 55, 0.05);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 20px;
+      color: var(--text-muted);
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .faq-answer.open {
+      max-height: 500px;
+      padding: 0 20px 20px 20px;
+    }
+
+    .faq-answer p {
+      margin-bottom: 10px;
+    }
+
+    .faq-answer ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    /* --- BOOKING FORM SECTION --- */
+    .booking-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: inherit;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .form-control.error {
+      border-color: #ff3333 !important;
+      background-color: rgba(255, 0, 0, 0.05);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .glow-submit-btn {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+      animation: glowing 2s infinite;
+      transition: var(--transition);
+    }
+
+    @keyframes glowing {
+      0% { box-shadow: 0 0 5px var(--primary); }
+      50% { box-shadow: 0 0 20px var(--secondary); }
+      100% { box-shadow: 0 0 5px var(--primary); }
+    }
+
+    /* --- CONTACT SECTION --- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-info-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .contact-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      background-color: #0d0d0d;
+      color: #ffffff;
+      padding: 50px 0 20px;
+      border-top: 2px solid var(--primary);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .footer-bottom a {
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    /* --- FLOATING ACTION BUTTONS --- */
+    .floating-buttons {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 9999;
+    }
+
+    .float-btn {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: var(--transition);
+      animation: floatGlow 2s infinite alternate;
+    }
+
+    .float-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .float-whatsapp {
+      background-color: #25d366;
+    }
+
+    .float-call {
+      background-color: var(--primary);
+      color: #000;
+    }
+
+    @keyframes floatGlow {
+      from { box-shadow: 0 0 5px rgba(255,255,255,0.4); }
+      to { box-shadow: 0 0 18px rgba(255,255,255,0.9); }
+    }
+
+    /* --- RESPONSIVE MEDIA QUERIES --- */
+    @media (max-width: 768px) {
+
+      .hamburger { display: block; }
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 75%;
+        background: var(--card-bg);
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.4s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+      }
+      .nav-links.active { right: 0; }
+      .hero-title-main { font-size: 2.5rem; }
+      .typewriter-container { font-size: 1.2rem; }
+      .hero-arrow { width: 40px; height: 40px; font-size: 1.1rem; }
+      .hero-arrow-left { left: 8px; }
+      .hero-arrow-right { right: 8px; }
+      .about-wrapper, .contact-grid, .form-row { grid-template-columns: 1fr; }
+      .about-experience-badge { right: 10px; bottom: -10px; }
+    }
+
+    /* =========================================================
+       ADDED BY CLAUDE — do not conflict with rules above.
+       1) Deeper mobile-friendliness pass (small phones, overflow)
+       2) Nav close (X) button + backdrop for the mobile menu
+       3) Hover-swap image effect for the About "Empowering Girl
+          Child" photo
+       4) Modern extras: scroll-to-top, skip link, reduced motion,
+          lazy-image fade-in, sticky mobile call bar
+       ========================================================= */
+
+    /* --- 1) MOBILE-FRIENDLINESS HARDENING --- */
+    html, body { max-width: 100%; overflow-x: hidden; }
+    img { max-width: 100%; }
+
+    @media (max-width: 768px) {
+      .nav-container { padding: 10px 16px; }
+      .brand-name { font-size: 0.92rem; }
+      .school-badge-svg { width: 42px; height: 42px; }
+      .section-padding { padding: 55px 0; }
+      .section-title h2 { font-size: 1.9rem; }
+      .hero-title-main { font-size: clamp(2.2rem, 9vw, 3rem); letter-spacing: 2px; }
+      .typewriter-container { font-size: clamp(1rem, 4.5vw, 1.3rem); height: 40px; }
+      .hero-motto { font-size: 1.05rem; }
+      .hero-btns .btn { padding: 10px 20px; font-size: 0.9rem; }
+      .services-grid { grid-template-columns: 1fr; gap: 20px; }
+      .service-img-wrapper { height: 180px; }
+      .booking-wrapper { padding: 24px 18px; }
+      .glow-submit-btn { padding: 14px; font-size: 1rem; }
+      .float-btn { width: 46px; height: 46px; font-size: 1.2rem; }
+      .floating-buttons { bottom: 16px; right: 16px; gap: 10px; }
+      .testimonial-card { width: 88vw; max-width: 320px; }
+      .about-experience-badge { padding: 12px 16px; font-size: 0.85rem; }
+      iframe[title="Map Location"] { height: 200px; }
+    }
+
+    @media (max-width: 380px) {
+      .hero-title-main { font-size: 1.9rem; }
+      .section-title h2 { font-size: 1.6rem; }
+      .btn { padding: 10px 18px; font-size: 0.85rem; }
+    }
+
+    /* --- 2) MOBILE NAV CLOSE (X) BUTTON + BACKDROP --- */
+    .nav-close-btn {
+      display: none;
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      color: var(--text-color);
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links.active .nav-close-btn { display: block; }
+      .nav-links { padding-top: 60px; }
+    }
+
+    .nav-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-backdrop.active {
+      display: block;
+      opacity: 1;
+    }
+
+    /* --- 3) ABOUT IMAGE HOVER-SWAP EFFECT --- */
+    .about-img-box {
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .about-img-box img {
+      transition: opacity 0.6s ease, transform 6s ease;
+    }
+
+    .about-img-box .about-img-alt {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      pointer-events: none;
+    }
+
+    .about-img-box:hover .about-img-alt {
+      opacity: 1;
+    }
+
+    .about-img-box:hover img:not(.about-img-alt) {
+      transform: scale(1.04);
+    }
+
+    /* --- 4) MODERN EXTRAS --- */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background: var(--primary);
+      color: #000;
+      padding: 10px 16px;
+      z-index: 10000;
+      border-radius: 0 0 8px 0;
+      font-weight: 600;
+    }
+
+    .skip-link:focus {
+      left: 0;
+    }
+
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #000;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: var(--transition);
+      z-index: 999;
+    }
+
+    .scroll-top-btn.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    img.lazy-fade {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    img.lazy-fade.loaded {
+      opacity: 1;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    .toast-message {
+      position: fixed;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #222;
+      color: #fff;
+      padding: 14px 22px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition);
+      z-index: 10000;
+    }
+
+    .toast-message.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ADDED: Skip link for keyboard/screen-reader accessibility -->
+  <a href="#home" class="skip-link">Skip to content</a>
+
+  <!-- HEADER / NAV -->
+  <header>
+    <div class="nav-container container">
+      <div class="badge-logo">
+
+        <!-- UPDATED: real school badge photo replacing the SVG seal -->
+        <img class="school-badge-svg" src="assets/badge.jpeg" alt="Antonia's Learning &amp; Beauty Centre Official Badge">
+        <!-- Updated Title with "Learning &" -->
+        <div class="brand-name">ANTONIAS<br><span style="font-size:0.78rem; font-weight:600; color:var(--primary);">Learning &amp; Beauty Centre</span></div>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <!-- ADDED: dedicated close (X) button shown inside the open mobile menu -->
+        <button class="nav-close-btn" id="navCloseBtn" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#features">Key Features</a>
+        <a href="#about">About Us</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQ</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+        <a href="#challenges" class="nav-support-link" onclick="openSupportModal(event)">Support</a>
+      </nav>
+      <div class="mobile-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <!-- Mobile hamburger menu icon toggles seamlessly between Bars and X -->
+        <button class="hamburger" id="hamburger" aria-label="Open Menu">
+          <i class="fas fa-bars" id="menuIcon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ADDED: backdrop overlay, click outside the mobile menu to close it -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <!-- Exactly 4 Hero Background Images -->
+    <div class="hero-bg active" style="background-image: url('assets/salon\ A.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+    <div class="hero-bg" style="background-image: url('assets/Newstudents.jpg');background-size: cover; background-position: center; background-repeat: no-repeat; "></div>
+    <div class="hero-bg" style="background-image: url('assets/posrer2.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+    <div class="hero-bg" style="background-image: url('assets/bridal.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+    <div class="hero-overlay"></div>
+    
+    <!-- Hero Slider Arrow Navigation Controls -->
+    <button class="hero-arrow hero-arrow-left" id="prevHeroBtn" onclick="changeHeroSlide(-1)" aria-label="Previous Slide">&lt;</button>
+    <button class="hero-arrow hero-arrow-right" id="nextHeroBtn" onclick="changeHeroSlide(1)" aria-label="Next Slide">&gt;</button>
+
+    <div class="hero-content bounce-in">
+      <!-- ADDED: continuously scrolling description, right-to-left, seamless loop -->
+      <div class="hero-desc-track-wrap">
+        <div class="hero-desc-track">
+          <span>Empowering Uganda's Girl Child Through Hairdressing, Makeup, Bridal Styling &amp; Salon Management — Start Earning In Just 2 Months.</span>
+          <span>Empowering Uganda's Girl Child Through Hairdressing, Makeup, Bridal Styling &amp; Salon Management — Start Earning In Just 2 Months.</span>
+        </div>
+      </div>
+      <h1 class="hero-title-main">ANTONIAS</h1>
+      <div class="typewriter-container">
+        <span id="typewriterText"></span><span class="cursor"></span>
+      </div>
+      <p class="hero-motto">"SKILLING FOR SELF RELIANCE"</p>
+      <div class="hero-btns">
+        <a href="tel:0705505474" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call Us Now</a>
+        <a href="#services" class="btn btn-secondary"><i class="fas fa-images"></i> View Collection</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="section-padding container" id="services">
+    <div class="section-title bounce-in">
+      <h2>Our Premium Services</h2>
+      <p>Restoring Diginity And Livelyhood through Practical hands-on skills Training In cosmetology Among
+         The Unemployed youth, Young Single Mothers, School Dropouts, orphans And Women Exiting Prostitution.</p>
+    </div>
+    <!-- UPDATED: reordered per client request — Skilling first, then Hair Dressing, Bridal Styling,
+         Professional Makeup, then the rest. Position (not the specific card) now decides which cards
+         are visible vs. tucked into "View More Services". -->
+    <div class="services-grid">
+      <!-- 1. Skilling & Salon Management (now first) -->
+      <div class="service-card bounce-in">
+        <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
+          <img class="service-img" src="assets/learning22.jpg" data-alt="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Skilling & Entrepreneurship">
+          <span class="service-badge">Tuyigiza Abayizi</span>
+        </div>
+        <div class="service-info">
+          <h3>Skilling &amp; Salon Management</h3>
+          <p>Practical courses for students. Learn on your own budget and start earning in 2 months.</p>
+          <a href="#booking" class="btn btn-primary" onclick="selectService('Skilling')">Enroll Service</a>
+        </div>
+      </div>
+
+      <!-- 2. Hair Dressing -->
+      <div class="service-card bounce-in">
+        <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
+          <img class="service-img" src="assets/hairdressing2.jpg" data-alt="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=600&q=80" alt="Hair Dressing">
+          <span class="service-badge">Tusiba Enviri Zonna</span>
+        </div>
+        <div class="service-info">
+          <h3>Hair Dressing</h3>
+          <p>Complete hair styling, braiding, dreadlocks, washing, and modern hair treatments for all occasions.</p>
+          <a href="#booking" class="btn btn-primary" onclick="selectService('Hair Dressing')">Enroll Service</a>
+        </div>
+      </div>
+
+      <!-- 3. Bridal Styling -->
+      <div class="service-card bounce-in">
+        <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
+          <img class="service-img" src="assets/bridal.jpg" data-alt="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80" alt="Bridal Styling">
+          <span class="service-badge">Tukola Ku Bagole</span>
+        </div>
+        <div class="service-info">
+          <h3>Bridal Styling</h3>
+          <p>Complete wedding packages to ensure brides and entourages look stunning on their big day.</p>
+          <a href="#booking" class="btn btn-primary" onclick="selectService('Bridal Styling')">Book Service</a>
+        </div>
+      </div>
+
+      <!-- 4. Professional Makeup -->
+      <div class="service-card bounce-in">
+        <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
+          <img class="service-img" src="assets/makeup.jpeg" data-alt="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=80" alt="Makeup">
+          <span class="service-badge">Tukola Makeup</span>
+        </div>
+        <div class="service-info">
+          <h3>Professional Makeup</h3>
+          <p>Glam, natural, and party makeup crafted to highlight your natural elegance.</p>
+          <a href="#booking" class="btn btn-primary" onclick="selectService('Makeup')">Enroll Service</a>
+        </div>
+      </div>
+
+      <!-- 5. Nail Care -->
+      <div class="service-card bounce-in">
+        <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
+          <img class="service-img" src="assets/manicure.jpg" data-alt="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=600&q=80" alt="Nail Care">
+          <span class="service-badge">Tukola Enjala</span>
+        </div>
+        <div class="service-info">
+          <h3>Nail Care</h3>
+          <p>Acrylics, gel polishing, nail art, and complete nail maintenance routines.</p>
+          <a href="#booking" class="btn btn-primary" onclick="selectService('Nail Care')">Enroll Service</a>
+        </div>
+      </div>
+
+      <!-- 6. Pedicure & Manicure — now falls into "View More" since it's 6th by new order -->
+      <div class="service-card bounce-in hidden-service">
+        <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
+          <img class="service-img" src="assets/manicure.jpeg" data-alt="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Pedicure and Manicure">
+          <span class="service-badge">Spa Care</span>
+        </div>
+        <div class="service-info">
+          <h3>Pedicure &amp; Manicure</h3>
+          <p>Relaxing foot and hand spa sessions, scrub exfoliation, and nail grooming.</p>
+          <a href="#booking" class="btn btn-primary" onclick="selectService('Pedicure & Manicure')">Book Service</a>
+        </div>
+      </div>
+
+      <!-- 7. Eye Lashes -->
+      <div class="service-card bounce-in hidden-service">
+        <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
+          <img class="service-img" src="assets/eyelashes.jpg" data-alt="https://images.unsplash.com/photo-1583001809873-a1284a563176?auto=format&fit=crop&w=600&q=80" alt="Eye Lashes">
+          <span class="service-badge">Lash Extensions</span>
+        </div>
+        <div class="service-info">
+          <h3>Eye Lashes &amp; Brows</h3>
+          <p>Classic, volume lash extensions, and professional brow tinting/shaping.</p>
+          <a href="#booking" class="btn btn-primary" onclick="selectService('Eye Lashes')">Enroll Service</a>
+        </div>
+      </div>
+
+      <!-- 8. Jewelries -->
+      <div class="service-card bounce-in hidden-service">
+        <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
+          <img class="service-img" src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" data-alt="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="Jeweleries">
+          <span class="service-badge">Accessories</span>
+        </div>
+        <div class="service-info">
+          <h3>Jewelry &amp; Accessories</h3>
+          <p>Exclusive bridal jewelry collections, necklaces, and styling accessories.</p>
+          <a href="#booking" class="btn btn-primary" onclick="selectService('Jeweleries')">Enroll Service</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="view-more-container">
+      <button class="btn btn-secondary" style="border-color: var(--primary); color: var(--text-color);" id="toggleServicesBtn" onclick="toggleServices()">View More Services</button>
+    </div>
+  </section>
+
+  <!-- KEY FEATURES SECTION -->
+  <section class="section-padding features-bg" id="features">
+    <div class="container">
+      <div class="section-title bounce-in">
+        <h2>Why Choose Antonia's</h2>
+        <p>Assured Employment After Learning, Earn in 2 Months, Bursaries & Support, Professional Elegance, Salon Management &amp; Empowering individuals while providing top-tier beauty care</p>
+      </div>
+      <div class="features-grid">
+        <!-- ADDED: new first card -->
+        <div class="feature-card bounce-in">
+          <div class="feature-icon"><i class="fas fa-briefcase"></i></div>
+          <h3>Assured Employment After Learning</h3>
+          <p>At Antonia's we maintain our students so they can work on our own clients, work with each other, or be recommended to trusted partner salons. We are a highly trusted centre — so no worries about jobs after you graduate.</p>
+        </div>
+        <div class="feature-card bounce-in">
+          <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Earn in 2 Months</h3>
+          <p>Our hands-on practical skilling programs ensure students gain real market skills and start earning income within 60 days.</p>
+        </div>
+        <div class="feature-card bounce-in">
+          <div class="feature-icon"><i class="fas fa-hand-holding-heart"></i></div>
+          <h3>Bursaries &amp; Support</h3>
+          <p>We empower young women by providing flexible study options, bursaries, and pay-after-earning options to suit every budget.</p>
+        </div>
+        <div class="feature-card bounce-in">
+          <div class="feature-icon"><i class="fas fa-award"></i></div>
+          <h3>Professional Elegance</h3>
+          <p>From bridal transformations to routine nail care, we maintain strict standards of elegance, quality, and hygiene.</p>
+        </div>
+        <div class="feature-card bounce-in">
+          <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Salon Management</h3>
+          <p>We don't just teach technical skills; we train our students in entrepreneurship and salon management for Self Reliance .</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADDED: OUR CHALLENGES SECTION -->
+  <section class="challenges-section" id="challenges">
+    <div class="container">
+      <div class="section-title bounce-in">
+        <h2>Our Challenges</h2>
+        <p>We are proud of how far Antonia's has come, but honesty matters just as much as pride. Here is what we are up against — and why your support can change a girl's story.</p>
+      </div>
+      <div class="challenges-grid">
+        <div class="challenge-card bounce-in">
+          <div class="challenge-icon"><i class="fas fa-cut"></i></div>
+          <h3>Not Enough Tools &amp; Equipment</h3>
+          <p>We stretch what little we have across many eager hands — hairdressing tools like dryers, clippers, combs and wig stands; manicure &amp; pedicure sets like foot spas and nail kits; and facial/beauty materials like steamers and skincare kits. Every extra tool means one more girl gets a real turn to practice.</p>
+        </div>
+        <div class="challenge-card bounce-in">
+          <div class="challenge-icon"><i class="fas fa-door-open"></i></div>
+          <h3>One Small Room, A Growing Family</h3>
+          <p>Antonia's currently runs from a single room. Every term more girls join us wanting to learn, and the space gets more congested — we simply need a bigger home for our training.</p>
+        </div>
+        <div class="challenge-card bounce-in">
+          <div class="challenge-icon"><i class="fas fa-shuttle-van"></i></div>
+          <h3>Getting Our Girls To Their Clients</h3>
+          <p>Our students are often taken out to serve clients directly — bridal work, door-to-door services. Reliable transport is a constant hustle, and sometimes the money for it just isn't there, yet we never want to turn away a girl who is ready to work and learn.</p>
+        </div>
+        <div class="challenge-card bounce-in">
+          <div class="challenge-icon"><i class="fas fa-hand-holding-heart"></i></div>
+          <h3>Bursaries That Run Out Fast</h3>
+          <p>We give bursaries to girls who cannot pay in full — single mothers, orphans, school dropouts, girls abandoned by partners — but our bursary fund is small compared to how many need it.</p>
+        </div>
+        <div class="challenge-card bounce-in">
+          <div class="challenge-icon"><i class="fas fa-globe-africa"></i></div>
+          <h3>Room To Grow, Beyond Masaka</h3>
+          <p>With more support we could open a bigger training centre and reach more girls across Uganda and East Africa — not just Kimanya. Every contribution moves us closer to that.</p>
+        </div>
+      </div>
+      <div class="challenges-cta bounce-in">
+        <p>If any of this speaks to you, you can contribute towards solving these challenges and help us widen our skilling centre — even internationally.</p>
+        <button class="btn support-btn" onclick="openSupportModal(event)"><i class="fas fa-hand-holding-heart"></i> Support Our Centre</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADDED: SUPPORT / CONTRIBUTE MODAL -->
+  <div class="support-modal-backdrop" id="supportModalBackdrop" onclick="if(event.target===this) closeSupportModal()">
+    <div class="support-modal" role="dialog" aria-modal="true" aria-labelledby="supportModalTitle">
+      <button class="support-modal-close" onclick="closeSupportModal()" aria-label="Close">&times;</button>
+      <h3 id="supportModalTitle">Thanking You For The Love Of Investing In Skills That Contribute To Growth Of Our Country and East Africa at large</h3>
+
+      <div class="support-tabs">
+        <button class="support-tab-btn active" data-provider="mtn" onclick="switchSupportTab('supportMtnTab', this)">MTN MoMo</button>
+        <button class="support-tab-btn" data-provider="airtel" onclick="switchSupportTab('supportAirtelTab', this)">Airtel Pay</button>
+        <button class="support-tab-btn" data-provider="bank" onclick="switchSupportTab('supportBankTab', this)">Stanbic Bank</button>
+      </div>
+
+      <!-- MTN -->
+      <div id="supportMtnTab" class="support-tab-content active">
+        <div class="form-group">
+          <label for="supportMtnAmount">Enter Amount (UGX)</label>
+          <input type="number" id="supportMtnAmount" class="form-control" value="10000" min="500" oninput="updateSupportUSSD()">
+        </div>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">
+          <!-- TEMP: Preston's own TashInTech merchant code, standing in until Antonia's own code is confirmed — swap before launch -->
+          <strong>Merchant Name:</strong> <span id="supportMtnNameDisplay">Tash In Tech Web Solutions</span><br>
+          <strong>Merchant Code:</strong> <span id="supportMtnCodeDisplay">83125827</span>
+        </p>
+        <div id="supportMtnUssdDisplay" class="support-ussd-box ussd-mtn">*165*3*83125827*10000#</div>
+        <a href="#" class="btn btn-block btn-pay-mtn" onclick="triggerSupportDial('mtn')">Tap To Pay Via MTN</a>
+        <button type="button" class="btn btn-block btn-pay-copy" onclick="copySupportCode('83125827','MTN Merchant Code')">Copy Merchant Code (83125827)</button>
+      </div>
+
+      <!-- Airtel -->
+      <div id="supportAirtelTab" class="support-tab-content">
+        <div class="form-group">
+          <label for="supportAirtelAmount">Enter Amount (UGX)</label>
+          <input type="number" id="supportAirtelAmount" class="form-control" value="10000" min="500" oninput="updateSupportUSSD()">
+        </div>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">
+          <!-- TEMP: Preston's own TashInTech merchant code, standing in until Antonia's own code is confirmed — swap before launch -->
+          <strong>Merchant Name:</strong> <span id="supportAirtelNameDisplay">Tash In Tech Web Solutions</span><br>
+          <strong>Merchant Code:</strong> <span id="supportAirtelCodeDisplay">7185846</span>
+        </p>
+        <div id="supportAirtelUssdDisplay" class="support-ussd-box ussd-airtel">*185*9*7185846*10000#</div>
+        <a href="#" class="btn btn-block btn-pay-airtel" onclick="triggerSupportDial('airtel')">Tap To Pay Via Airtel</a>
+        <button type="button" class="btn btn-block btn-pay-copy" onclick="copySupportCode('7185846','Airtel Merchant Code')">Copy Merchant Code (7185846)</button>
+      </div>
+
+      <!-- Stanbic Bank -->
+      <div id="supportBankTab" class="support-tab-content">
+        <!-- TEMP: Preston's own account, standing in until Antonia's own Stanbic account is confirmed — swap before launch -->
+        <div class="support-bank-details">
+          <p><strong>Bank Name:</strong> Stanbic Bank Uganda</p>
+          <p><strong>Account Name:</strong> <span id="supportBankNameDisplay">Tash In Tech Web Solutions</span></p>
+          <p><strong>Account Number:</strong> <span id="supportBankAccDisplay">9030025103385</span></p>
+        </div>
+
+        <a href="tel:*185*7*1%23" class="btn btn-block btn-pay-airtel">Pay via Airtel Mobile-to-Bank (*185#)</a>
+        <a href="tel:*165*6%23" class="btn btn-block btn-pay-mtn">Pay via MTN Mobile-to-Bank (*165#)</a>
+        <button type="button" class="btn btn-block btn-pay-copy" onclick="copySupportCode('9030025103385','Stanbic Account Number')">Copy Bank Account Number</button>
+
+        <hr style="margin:20px 0; border:0; border-top:1px solid var(--border-color);">
+
+        <h4 style="margin-bottom:10px; font-size:1rem;">Confirm Bank Deposit</h4>
+        <div class="form-group">
+          <input type="text" id="supportDonorName" class="form-control" placeholder="Your Full Name">
+        </div>
+        <div class="form-group">
+          <input type="text" id="supportBankRef" class="form-control" placeholder="Deposit Reference / Transaction ID">
+          <span class="support-hint-text">*Found in your SMS receipt (e.g. Trans ID or Ref No.)</span>
+        </div>
+        <button type="button" class="btn btn-block btn-pay-wa" onclick="sendSupportBankProof()">Send Deposit Proof Via WhatsApp</button>
+      </div>
+
+      <p class="support-note">Prefer to talk first? <a href="https://wa.me/256705505474?text=Hello%20Antonia's%20Learning%20%26%20Beauty%20Centre%2C%20I%20would%20like%20to%20know%20more%20about%20supporting%20your%20skilling%20centre." target="_blank" style="color:var(--primary); font-weight:600;">Message us on WhatsApp</a></p>
+    </div>
+  </div>
+
+  <!-- ABOUT US SECTION -->
+  <section class="section-padding container" id="about">
+    <div class="about-wrapper">
+      <div class="about-img-box bounce-in">
+        <img src="assets/salon A.jpeg" alt="Antonia Salon Interior">
+        <!-- ADDED: second image that fades in on hover (see CSS .about-img-alt / JS hover listener) -->
+        <img class="about-img-alt" src="assets/poster A.jpeg" alt="Antonia Salon Students at Work">
+        <div class="about-experience-badge">
+          Empowering<br>Girl Child
+        </div>
+      </div>
+      <div class="about-text bounce-in">
+        <h3>Transforming Beauty into Self-Reliance</h3>
+        <p>Located in <strong>Kimanya - Masaka, Uganda, East Africa</strong>, <strong>Antonia's Learning and Beauty Centre</strong> is dedicated to delivering world-class hair, makeup, and body care services while empowering the community.</p>
+        <p>Our mission focuses heavily on equipping the girl child with practical, income-generating skills. Through our bursary schemes and flexible budget programs, every ambitious student can learn, build self-reliance, and launch a successful career in beauty and entrepreneurship.</p>
+        <p>Whether you visit us for a glam makeup transformation, bridal styling, or to study salon management, we guarantee elegance, professionalism, and warm hospitality.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="section-padding testimonials-bg" id="testimonials">
+    <div class="container">
+      <div class="section-title bounce-in">
+        <h2>Client &amp; Student Testimonials</h2>
+        <!-- ADDED: sympathetic subheading -->
+        <p class="testimonials-subheading">Many of our students arrive with nothing but courage: girls abandoned by men, single mothers, others who stopped school in P7 for lack of fees, orphans, and girls whose parents simply could not afford to educate them at all. Antonia's gives every one of them a skill, an income, and a fresh start. Tap any card to pause/play the scrolling testimonials.</p>
+      </div>
+    </div>
+    <div class="marquee-container bounce-in">
+      <div class="marquee-track" id="marqueeTrack" onclick="toggleMarquee()">
+        <!-- Testimonial 1 — student -->
+        <div class="testimonial-card">
+          <span class="testimonial-tag">Student Story</span>
+          <p>"I used to wait tables in a small downtown restaurant just to survive. After training at Antonia's, I run my own hairdressing corner today and I teach other girls the very skill that changed my life."</p>
+          <div class="client-info">
+            <div class="client-initials">AB</div>
+            <div>
+              <strong>Asiimwe Barbra</strong><br>
+              <small>Cosmetology &amp; Salon Management Graduate</small>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 — student -->
+        <div class="testimonial-card">
+          <span class="testimonial-tag">Student Story</span>
+          <p>"He left when I was pregnant and I had nothing. Today I do makeup for clients and I pay my own rent. Antonia's did not just teach me a skill, it gave me back my dignity."</p>
+          <div class="client-info">
+            <div class="client-initials">NW</div>
+            <div>
+              <strong>Nanyonja Winnie.</strong><br>
+              <small>Makeup Graduate</small>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 — student -->
+        <div class="testimonial-card">
+          <span class="testimonial-tag">Student Story</span>
+          <p>"I stopped school in Primary Seven because there was no more fees. At Antonia's, nobody asked for a certificate — only my willingness to learn. Now I earn from nail care and pedicure work."</p>
+          <div class="client-info">
+            <div class="client-initials">NM</div>
+            <div>
+              <strong>Namwojo Maria</strong><br>
+              <small>Cosmetology Graduate</small>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 4 — student -->
+        <div class="testimonial-card">
+          <span class="testimonial-tag">Student Story</span>
+          <p>"I Dropped out of School and started offloading trailer in town. At Antonias, I got my life change for good and now i earn much more money than before and i am able sustain my family, Remember i work independently"</p>
+          <div class="client-info">
+            <div class="client-initials">MJ</div>
+            <div>
+              <strong>Mboza Julius</strong><br>
+              <small>Salon Management Graduate</small>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 5 — student -->
+        <div class="testimonial-card">
+          <span class="testimonial-tag">Student Story</span>
+          <p>"As a single mother, I thought life had ended for me after my husband left. Antonia's gave me a bursary, a skill, and most of all, hope for my children's future."</p>
+          <div class="client-info">
+            <div class="client-initials">NM</div>
+            <div>
+              <strong>Namuli Maria</strong><br>
+              <small>Skilling &amp; Entrepreneurship Graduate</small>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 6 — bridal client -->
+        <div class="testimonial-card">
+          <span class="testimonial-tag tag-client">Client Testimonial</span>
+          <p>"The bridal team made my wedding day perfect — hair, makeup and styling all handled in one place, so professional and calm even on such a busy morning."</p>
+          <div class="client-info">
+            <div class="client-initials">JN</div>
+            <div>
+              <strong>Joan Natoro</strong><br>
+              <small>Bride, Bridal Styling Client</small>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 7 — hairdressing client -->
+        <div class="testimonial-card">
+          <span class="testimonial-tag tag-client">Client Testimonial</span>
+          <p>"Best hairdressing salon in Kimanya, hands down. Friendly, skilled hands, and they are always on time for my appointments."</p>
+          <div class="client-info">
+            <div class="client-initials">NZ</div>
+            <div>
+              <strong>Nakibenja Zahara</strong><br>
+              <small>Regular Hair Dressing Client</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADDED: the same 7 cards repeated once so the -50% scroll animation loops seamlessly -->
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="testimonial-tag">Student Story</span>
+          <p>"I used to wait tables in a small downtown restaurant just to survive. After training at Antonia's, I run my own hairdressing corner today and I teach other girls the very skill that changed my life."</p>
+          <div class="client-info">
+            <div class="client-initials">AB</div>
+            <div>
+              <strong>Asiimwe Barbra</strong><br>
+              <small>Cosmetology &amp; Salon Management Graduate</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="testimonial-tag">Student Story</span>
+          <p>"He left when I was pregnant and I had nothing. Today I do makeup for clients and I pay my own rent. Antonia's did not just teach me a skill, it gave me back my dignity."</p>
+          <div class="client-info">
+            <div class="client-initials">SR</div>
+            <div>
+              <strong>Sarah R.</strong><br>
+              <small>Makeup Graduate</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="testimonial-tag">Student Story</span>
+          <p>"I stopped school in Primary Seven because there was no more fees. At Antonia's, nobody asked for a certificate — only my willingness to learn. Now I earn from nail care and pedicure work."</p>
+          <div class="client-info">
+            <div class="client-initials">JK</div>
+            <div>
+              <strong>Joan Kirabo</strong><br>
+              <small>Nail Care Graduate</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="testimonial-tag">Student Story</span>
+          <p>"I lost both my parents while I was still young and had no one to guide me. Antonia's became my family and gave me a trade I can stand on for the rest of my life."</p>
+          <div class="client-info">
+            <div class="client-initials">FT</div>
+            <div>
+              <strong>Florence T.</strong><br>
+              <small>Salon Management Graduate</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="testimonial-tag">Student Story</span>
+          <p>"As a single mother, I thought life had ended for me after my husband left. Antonia's gave me a bursary, a skill, and most of all, hope for my children's future."</p>
+          <div class="client-info">
+            <div class="client-initials">NL</div>
+            <div>
+              <strong>Nakito Leticia</strong><br>
+              <small>Skilling &amp; Entrepreneurship Graduate</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="testimonial-tag tag-client">Client Testimonial</span>
+          <p>"The bridal team made my wedding day perfect — hair, makeup and styling all handled in one place, so professional and calm even on such a busy morning."</p>
+          <div class="client-info">
+            <div class="client-initials">GN</div>
+            <div>
+              <strong>Grace Nabirye</strong><br>
+              <small>Bride, Bridal Styling Client</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="testimonial-tag tag-client">Client Testimonial</span>
+          <p>"Best hairdressing salon in Kimanya, hands down. Friendly, skilled hands, and they are always on time for my appointments."</p>
+          <div class="client-info">
+            <div class="client-initials">HB</div>
+            <div>
+              <strong>Harriet Byaruhanga</strong><br>
+              <small>Regular Hair Dressing Client</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADDED: OUR GALLERY SECTION -->
+  <section class="section-padding container" id="gallery">
+    <div class="section-title bounce-in">
+      <h2>Our Gallery</h2>
+      <p>A glimpse of our students, our salon floor, and the work we're proud of</p>
+    </div>
+
+    <h3 class="gallery-subtitle bounce-in">Photos</h3>
+    <div class="gallery-photos-grid bounce-in">
+      <div class="gallery-photo-item">
+        <img src="assets/hairdressing2.jpg" alt="Hair dressing session at Antonia's" loading="lazy">
+      </div>
+      <div class="gallery-photo-item">
+        <img src="assets/bridal.jpg" alt="Bridal styling at Antonia's" loading="lazy">
+      </div>
+      <div class="gallery-photo-item">
+        <img src="assets/image20.jpg" alt="Makeup session at Antonia's" loading="lazy">
+      </div>
+           <div class="gallery-photo-item">
+        <img src="assets/image2.jpg" alt="Bridal styling at Antonia's" loading="lazy">
+      </div>
+    </div>
+    <div class="gallery-view-all bounce-in">
+      <a href="gallery.html#photos" class="btn btn-primary">View All Photos</a>
+    </div>
+
+    <h3 class="gallery-subtitle bounce-in">Videos</h3>
+    <div class="gallery-videos-grid bounce-in">
+      <div class="gallery-video-item">
+        <video class="gallery-video" controls muted playsinline preload="metadata" poster="assets/salon A.jpeg">
+          <source src="https://pub-f9aab72c5a7a45ae97577474af49f334.r2.dev/bridal.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="gallery-video-item">
+        <video class="gallery-video" controls muted playsinline preload="metadata" poster="assets/posrer2.jpeg">
+          <source src="https://pub-f9aab72c5a7a45ae97577474af49f334.r2.dev/students1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <div class="gallery-view-all bounce-in">
+      <a href="gallery.html#videos" class="btn btn-primary">View All Videos</a>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (Enriched Detailed Answers) -->
+  <section class="section-padding container" id="faq">
+    <div class="section-title bounce-in">
+      <h2>Frequently Asked Questions</h2>
+      <p>Everything you need to know about our services and vocational skilling program</p>
+    </div>
+    <div class="faq-accordion bounce-in">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How soon can a student start earning income?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>At Antonia's Learning &amp; Beauty Centre, our practical curriculum is structured for rapid skill acquisition:</p>
+          <ul>
+            <li><strong>Intensive Hands-on Training:</strong> Students get real practical practice from day one on hairdressing, makeup, and nail care.</li>
+            <li><strong>Earning within 2 Months:</strong> Within just 60 days of enrollment, students gain sufficient proficiency to serve paid clients or start working under guidance while continuing advanced entrepreneurship and salon management modules.</li>
+            <li><strong>Pay-After-Gaining-Skills Option:</strong> We also facilitate flexible payment plans where students can pay tuition balance after they begin earning.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Are bursaries available for skilling young women?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, bursaries are a core part of our empowerment mission for the girl child:</p>
+          <ul>
+            <li><strong>Financial Support &amp; Bursaries:</strong> We offer dedicated bursaries to vulnerable and ambitious students to reduce tuition burdens.</li>
+            <li><strong>Flexible Budget Learning:</strong> Anyone who desires to learn can be taught according to their individual budget.</li>
+            <li><strong>Complete Entrepreneurship Package:</strong> Tuition includes practical training, customer care, and salon management skills for total independence.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Do I need to book in advance for bridal services?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>For bridal styling (Tukola Ku Bagole), advance booking is recommended to guarantee quality service:</p>
+          <ul>
+            <li><strong>Timely Reservations:</strong> We advise booking 1 to 2 weeks in advance to allow time for bridal trials, theme matching, and scheduling.</li>
+            <li><strong>Full Package Inclusions:</strong> Our bridal team provides hair styling, high-definition makeup, matching jewelry sets, and bridesmaid styling.</li>
+            <li><strong>On-Site or Mobile Service:</strong> We cater to brides both at our salon in Kimanya - Masaka and directly at event venues upon request.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Where is Antonia's Beauty Centre located and how do I contact you?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We are conveniently situated in <strong>Kimanya - Masaka, Uganda</strong>:</p>
+          <ul>
+            <li><strong>WhatsApp &amp; Booking Line:</strong> 0705 505 474 (Instant booking and inquiry response).</li>
+            <li><strong>Direct Phone Support:</strong> Call us anytime on 0781 704 061 or 0749 479 749.</li>
+            <li><strong>Working Hours:</strong> Open Monday to Saturday from 8:00 AM to 7:00 PM. Walk-ins and appointments are welcome.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM SECTION -->
+  <section class="section-padding container" id="booking">
+    <div class="section-title bounce-in">
+      <h2>Book Service / Student Registration</h2>
+      <p>Fill out the form below; you will be contacted sooner than later!</p>
+    </div>
+    <div class="booking-wrapper bounce-in">
+      <form id="bookingForm" action="https://formsubmit.co/antoniaslearningbeautycentre@gmail.com" method="POST">
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="Name" class="form-control" placeholder="Enter your full name">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="Phone" class="form-control" placeholder="e.g., 0705505474">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address (Optional)</label>
+            <input type="email" id="email" name="Email" class="form-control" placeholder="Enter your email">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="serviceSelect">Service / Program *</label>
+          <select id="serviceSelect" name="Service" class="form-control">
+            <option value="">-- Select Service or Skilling --</option>
+            <option value="Hair Dressing">Hair Dressing (Tusiba Enviri Zonna)</option>
+            <option value="Makeup">Makeup (Tukola Makeup)</option>
+            <option value="Bridal Styling">Bridal Styling (Tukola Ku Bagole)</option>
+            <option value="Nail Care">Nail Care (Tukola Enjala)</option>
+            <option value="Pedicure & Manicure">Pedicure &amp; Manicure</option>
+            <option value="Eye Lashes">Eye Lashes &amp; Brows</option>
+            <option value="Jeweleries">Jewelry &amp; Styling</option>
+            <option value="Skilling Course">Skilling &amp; Entrepreneurship Course</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookingDate">Preferred Date *</label>
+            <input type="date" id="bookingDate" name="Date" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="bookingTime">Preferred Time *</label>
+            <input type="time" id="bookingTime" name="Time" class="form-control">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Special Requirements / Notes *</label>
+          <textarea id="message" name="Message" rows="4" class="form-control" placeholder="Describe what you want or specify your training budget..."></textarea>
+        </div>
+
+        <button type="submit" class="glow-submit-btn">Submit Booking Request</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section-padding container" id="contact">
+    <div class="section-title bounce-in">
+      <h2>Contact Us</h2>
+      <p>Get in touch or visit our beauty centre in Masaka</p>
+    </div>
+    <div class="contact-grid bounce-in">
+      <div>
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <h4>Location</h4>
+            <p>Kimanya - Masaka, Uganda</p>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+          <div>
+            <h4>Phone Lines</h4>
+            <p><a href="tel:0705505474">0705 505 474</a> (WhatsApp / Booking)</p>
+            <p><a href="tel:0781704061">0781 704 061</a> / <a href="tel:0749479749">0749 479 749</a></p>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <h4>Email</h4>
+            <p>antoniaslearningbeautycentre@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <iframe title="Map Location" src="https://maps.google.com/maps?q=Masaka%20Uganda&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="250" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <h3>ANTONIAS</h3>
+        <p>Skilling For Self Reliance.</p>
+        <p style="margin-top:10px; font-size:0.85rem; color:#888;">Empowering young women through skilling &amp; practical salon management.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul style="line-height:2;">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#booking">Booking Form</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Location &amp; Contacts</h4>
+        <p>Kimanya - Masaka, Uganda</p>
+        <p>Tel: 0705 505 474 / 0781 704 061</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Antonias Learning and Beauty Centre. All Rights Reserved. || Powered by <a href="https://portifolio.prestontash.com/" target="_blank" rel="noopener">TashInTech</a></p>
+    </div>
+  </footer>
+
+  <!-- ADDED: scroll-to-top button (appears after scrolling down) -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- ADDED: toast message shown after a successful booking submission -->
+  <div class="toast-message" id="toastMessage">Opening WhatsApp with your booking details...</div>
+
+  <!-- FLOATING CTA BUTTONS -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/256705505474?text=Hello%20Antonia%20Learning%20and%20Beauty%20Centre,%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" class="float-btn float-whatsapp" aria-label="WhatsApp Us">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:0781704061" class="float-btn float-call" aria-label="Call Us">
+      <i class="fas fa-phone-alt"></i>
+    </a>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    /* --- DARK / LIGHT MODE SWITCH --- */
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      if (currentTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeIcon.className = 'fas fa-moon';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeIcon.className = 'fas fa-sun';
+      }
+    });
+
+    /* --- MOBILE MENU TOGGLE (ICON & MENU INTERACTION) --- */
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const menuIcon = document.getElementById('menuIcon');
+
+    function toggleMenu() {
+      navLinks.classList.toggle('active');
+      if (navLinks.classList.contains('active')) {
+        menuIcon.className = 'fas fa-times'; // Displays 'X' when menu open
+      } else {
+        menuIcon.className = 'fas fa-bars';  // Returns to 3-bar menu icon when closed
+      }
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking on any navigation item
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuIcon.className = 'fas fa-bars';
+      });
+    });
+
+    /* --- HERO BACKGROUND SLIDESHOW WITH 4 PHOTOS --- */
+    const bgSlides = document.querySelectorAll('.hero-bg');
+    let currentSlide = 0;
+    let autoSlideInterval = setInterval(autoSlide, 3000);
+
+    function showSlide(index) {
+      bgSlides.forEach(slide => slide.classList.remove('active'));
+      currentSlide = (index + bgSlides.length) % bgSlides.length;
+      bgSlides[currentSlide].classList.add('active');
+    }
+
+    function autoSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function changeHeroSlide(direction) {
+      clearInterval(autoSlideInterval);
+      showSlide(currentSlide + direction);
+      autoSlideInterval = setInterval(autoSlide, 3000);
+    }
+
+    /* --- TYPEWRITER ANIMATION FOR HERO --- */
+    const words = [
+      "LEARNING",
+      "AND",
+      "SKILLING",
+      "CENTRE"
+    ];
+    let wordIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
+    const typewriterElement = document.getElementById("typewriterText");
+
+    function typeWriter() {
+      const currentWord = words[wordIdx];
+      
+      if (isDeleting) {
+        typewriterElement.textContent = currentWord.substring(0, charIdx - 1);
+        charIdx--;
+      } else {
+        typewriterElement.textContent = currentWord.substring(0, charIdx + 1);
+        charIdx++;
+      }
+
+      let speed = isDeleting ? 60 : 120;
+
+      if (!isDeleting && charIdx === currentWord.length) {
+        speed = 1000;
+        isDeleting = true;
+      } else if (isDeleting && charIdx === 0) {
+        isDeleting = false;
+        wordIdx = (wordIdx + 1) % words.length;
+        speed = 300;
+      }
+
+      setTimeout(typeWriter, speed);
+    }
+
+    document.addEventListener("DOMContentLoaded", typeWriter);
+
+    /* --- SERVICES FLIP IMAGE ON CLICK --- */
+    function toggleServiceImg(wrapper) {
+      const img = wrapper.querySelector('.service-img');
+      const currentSrc = img.src;
+      const altSrc = img.getAttribute('data-alt');
+      if (altSrc) {
+        img.src = altSrc;
+        img.setAttribute('data-alt', currentSrc);
+      }
+    }
+
+    /* --- VIEW MORE SERVICES TOGGLE --- */
+    function toggleServices() {
+      const hiddenServices = document.querySelectorAll('.hidden-service');
+      const btn = document.getElementById('toggleServicesBtn');
+      let isHidden = false;
+
+      hiddenServices.forEach(service => {
+        if (service.style.display === 'flex') {
+          service.style.display = 'none';
+          isHidden = true;
+        } else {
+          service.style.display = 'flex';
+        }
+      });
+
+      btn.textContent = isHidden ? "View More Services" : "Show Less Services";
+    }
+
+    /* --- SELECT SERVICE PRE-FILL --- */
+    function selectService(serviceName) {
+      const select = document.getElementById('serviceSelect');
+      for (let option of select.options) {
+        if (option.value.toLowerCase().includes(serviceName.toLowerCase())) {
+          option.selected = true;
+          break;
+        }
+      }
+    }
+
+    /* --- TESTIMONIALS PAUSE / PLAY TOGGLE --- */
+    function toggleMarquee() {
+      const track = document.getElementById('marqueeTrack');
+      track.classList.toggle('paused');
+    }
+
+    /* --- FAQ ACCORDION --- */
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      const isActive = element.classList.contains('active');
+
+      document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+
+      if (!isActive) {
+        element.classList.add('active');
+        answer.classList.add('open');
+      }
+    }
+
+    /* --- AUDIO ALERT & FORM VALIDATION --- */
+    function playErrorSound() {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(440, ctx.currentTime);
+      gain.gain.setValueAtTime(0.3, ctx.currentTime);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.4);
+    }
+
+    const bookingForm = document.getElementById('bookingForm');
+    bookingForm.addEventListener('submit', function(e) {
+      const requiredInputs = [
+        document.getElementById('fullName'),
+        document.getElementById('phone'),
+        document.getElementById('serviceSelect'),
+        document.getElementById('bookingDate'),
+        document.getElementById('bookingTime'),
+        document.getElementById('message')
+      ];
+
+      let hasError = false;
+
+      requiredInputs.forEach(input => {
+        if (!input.value.trim()) {
+          input.classList.add('error');
+          hasError = true;
+        } else {
+          input.classList.remove('error');
+        }
+      });
+
+      if (hasError) {
+        e.preventDefault();
+        playErrorSound();
+        alert('Please fill in all required fields marked with red border.');
+        return false;
+      }
+
+      const phone = document.getElementById('phone').value;
+      const name = document.getElementById('fullName').value;
+      const service = document.getElementById('serviceSelect').value;
+      const date = document.getElementById('bookingDate').value;
+      const time = document.getElementById('bookingTime').value;
+      const msg = document.getElementById('message').value;
+
+      const waText = `New Booking Request:%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(service)}%0ADate: ${encodeURIComponent(date)}%0ATime: ${encodeURIComponent(time)}%0ANotes: ${encodeURIComponent(msg)}`;
+      
+      window.open(`https://wa.me/256705505474?text=${waText}`, '_blank');
+    });
+
+    /* --- BOUNCE-IN SCROLL ANIMATION --- */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.bounce-in').forEach(el => observer.observe(el));
+  </script>
+
+  <!-- =========================================================
+       ADDED BY CLAUDE — new script block, does not modify or
+       remove anything from the script above.
+       ========================================================= -->
+  <script>
+    /* --- MOBILE NAV: X close button + backdrop-click-to-close --- */
+    (function() {
+      const navLinksEl = document.getElementById('navLinks');
+      const navBackdrop = document.getElementById('navBackdrop');
+      const navCloseBtn = document.getElementById('navCloseBtn');
+      const hamburgerBtn = document.getElementById('hamburger');
+      const menuIconEl = document.getElementById('menuIcon');
+
+      function openMobileMenu() {
+        navLinksEl.classList.add('active');
+        navBackdrop.classList.add('active');
+        if (menuIconEl) menuIconEl.className = 'fas fa-times';
+      }
+
+      function closeMobileMenu() {
+        navLinksEl.classList.remove('active');
+        navBackdrop.classList.remove('active');
+        if (menuIconEl) menuIconEl.className = 'fas fa-bars';
+      }
+
+      // Keep the backdrop in sync whenever the existing hamburger toggles the menu
+      if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', () => {
+          if (navLinksEl.classList.contains('active')) {
+            navBackdrop.classList.add('active');
+          } else {
+            navBackdrop.classList.remove('active');
+          }
+        });
+      }
+
+      if (navCloseBtn) {
+        navCloseBtn.addEventListener('click', closeMobileMenu);
+      }
+
+      if (navBackdrop) {
+        navBackdrop.addEventListener('click', closeMobileMenu);
+      }
+
+      // Close menu when a nav link is tapped (backdrop should hide too)
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navBackdrop.classList.remove('active');
+        });
+      });
+    })();
+
+    /* --- ABOUT IMAGE HOVER-SWAP (works on tap for touch devices too) --- */
+    (function() {
+      const aboutBox = document.querySelector('.about-img-box');
+      if (!aboutBox) return;
+      const altImg = aboutBox.querySelector('.about-img-alt');
+      if (!altImg) return;
+
+      // Touch devices: tap to toggle the swap since there's no real hover
+      aboutBox.addEventListener('click', () => {
+        altImg.style.opacity = altImg.style.opacity === '1' ? '0' : '1';
+      });
+    })();
+
+    /* --- SCROLL TO TOP BUTTON --- */
+    (function() {
+      const scrollBtn = document.getElementById('scrollTopBtn');
+      if (!scrollBtn) return;
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          scrollBtn.classList.add('visible');
+        } else {
+          scrollBtn.classList.remove('visible');
+        }
+      });
+
+      scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    /* --- LAZY-LOAD + FADE-IN FOR IMAGES (perf on mobile data) --- */
+    (function() {
+      document.querySelectorAll('img').forEach(img => {
+        if (!img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
+        }
+      });
+    })();
+
+    /* --- TOAST ON BOOKING SUBMIT (extra confirmation feedback) --- */
+    (function() {
+      const form = document.getElementById('bookingForm');
+      const toast = document.getElementById('toastMessage');
+      if (!form || !toast) return;
+
+      form.addEventListener('submit', function() {
+        // Only fires after the existing validation in the script above allows submit
+        const anyError = form.querySelector('.form-control.error');
+        if (anyError) return;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 4000);
+      });
+    })();
+
+    /* --- REMEMBER THEME CHOICE ACROSS VISITS --- */
+    (function() {
+      const savedTheme = localStorage.getItem('antonias-theme');
+      const themeIconEl = document.getElementById('themeIcon');
+      if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        if (themeIconEl) themeIconEl.className = 'fas fa-sun';
+      }
+
+      const themeToggleEl = document.getElementById('themeToggle');
+      if (themeToggleEl) {
+        themeToggleEl.addEventListener('click', () => {
+          const current = document.documentElement.getAttribute('data-theme');
+          localStorage.setItem('antonias-theme', current === 'dark' ? 'dark' : 'light');
+        });
+      }
+    })();
+
+    /* --- GALLERY VIDEOS: only one plays at a time, none autoplay --- */
+    (function() {
+      const videos = document.querySelectorAll('.gallery-video');
+      videos.forEach(v => {
+        v.addEventListener('play', () => {
+          videos.forEach(other => { if (other !== v) other.pause(); });
+        });
+      });
+    })();
+
+    /* --- SUPPORT / CONTRIBUTE MODAL --- */
+    (function() {
+      // TEMP (Preston): these are Preston's own TashInTech merchant/account details,
+      // used only as a stand-in so the widget is fully working end-to-end.
+      // Swap all three for Antonia's own MTN code, Airtel code and Stanbic account
+      // before this goes live, so contributions land in Antonia's account.
+      const SUPPORT_MTN_CODE = '83125827';
+      const SUPPORT_MTN_NAME = 'Tash In Tech Web Solutions';
+      const SUPPORT_AIRTEL_CODE = '7185846';
+      const SUPPORT_AIRTEL_NAME = 'Tash In Tech Web Solutions';
+      const SUPPORT_BANK_ACCOUNT = '9030025103385';
+      const SUPPORT_BANK_NAME = 'Tash In Tech Web Solutions';
+      const SUPPORT_WHATSAPP = '256705505474';
+
+      window.openSupportModal = function(e) {
+        if (e) e.preventDefault();
+        const backdrop = document.getElementById('supportModalBackdrop');
+        if (backdrop) backdrop.classList.add('active');
+        updateSupportUSSD();
+      };
+
+      window.closeSupportModal = function() {
+        const backdrop = document.getElementById('supportModalBackdrop');
+        if (backdrop) backdrop.classList.remove('active');
+      };
+
+      window.switchSupportTab = function(tabId, btn) {
+        document.querySelectorAll('.support-tab-content').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.support-tab-btn').forEach(b => b.classList.remove('active'));
+        const target = document.getElementById(tabId);
+        if (target) target.classList.add('active');
+        if (btn) btn.classList.add('active');
+      };
+
+      window.updateSupportUSSD = function() {
+        const mtnAmt = (document.getElementById('supportMtnAmount') || {}).value || '0';
+        const airtelAmt = (document.getElementById('supportAirtelAmount') || {}).value || '0';
+        const mtnUssd = document.getElementById('supportMtnUssdDisplay');
+        const airtelUssd = document.getElementById('supportAirtelUssdDisplay');
+
+        if (mtnUssd) mtnUssd.textContent = `*165*3*${SUPPORT_MTN_CODE}*${mtnAmt}#`;
+        if (airtelUssd) airtelUssd.textContent = `*185*9*${SUPPORT_AIRTEL_CODE}*${airtelAmt}#`;
+      };
+
+      window.triggerSupportDial = function(provider) {
+        const amt = document.getElementById(provider === 'mtn' ? 'supportMtnAmount' : 'supportAirtelAmount').value || '10000';
+        if (provider === 'mtn') {
+          window.location.href = `tel:*165*3*${SUPPORT_MTN_CODE}*${amt}%23`;
+        } else {
+          window.location.href = `tel:*185*9*${SUPPORT_AIRTEL_CODE}*${amt}%23`;
+        }
+      };
+
+      window.copySupportCode = function(value, label) {
+        navigator.clipboard.writeText(value).then(() => {
+          alert(`${label} (${value}) copied to clipboard!`);
+        }).catch(() => {
+          alert(`Copy this manually: ${value}`);
+        });
+      };
+
+      window.sendSupportBankProof = function() {
+        const name = (document.getElementById('supportDonorName') || {}).value || '';
+        const ref = (document.getElementById('supportBankRef') || {}).value || '';
+
+        if (!name || !ref) {
+          alert('Please enter both your name and the transaction reference.');
+          return;
+        }
+
+        const message = `Hello Antonia's Learning & Beauty Centre, I have made a Stanbic Bank contribution.%0A%0A` +
+                        `*Donor Name:* ${encodeURIComponent(name)}%0A` +
+                        `*Reference/ID:* ${encodeURIComponent(ref)}`;
+
+        window.open(`https://wa.me/${SUPPORT_WHATSAPP}?text=${message}`, '_blank');
+      };
+
+      // Close modal on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeSupportModal();
+      });
+    })();
+  </script>
+</body>
+</html>
