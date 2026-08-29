@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Antonia's Learning and Beauty Centre | Kimanya - Masaka</title>
+  <title>Antonias Learning and Beauty Centre | Kimanya - Masaka</title>
   <meta name="description" content="Where beauty meets elegancy. Professional hairdressing, makeup, bridal styling, nail care, eyelashes, jewelry, and salon management skilling for empowering women in Masaka, Uganda.">
   <meta name="keywords" content="Salon Masaka, Hairdressing Uganda, Makeup Kimanya, Beauty School Masaka, Antonia Beauty Salon">
 
@@ -11,9 +11,9 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23ffffff' stroke='%231d3557' stroke-width='4'/%3E%3Ctext x='50' y='58' font-size='40' text-anchor='middle' fill='%23d4af37'%3EA%3C/text%3E%3C/svg%3E">
 
   <!-- ADDED: Open Graph / Social Share Tags -->
-  <meta property="og:title" content="Antonia's Learning and Beauty Centre | Kimanya - Masaka">
+  <meta property="og:title" content="Antonias Learning and Beauty Centre | Kimanya - Masaka">
   <meta property="og:description" content="Where beauty meets elegancy. Professional hairdressing, makeup, bridal styling, nail care, eyelashes, jewelry, and salon management skilling for empowering women in Masaka, Uganda.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:image" content="assets/badge.jpeg">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#d4af37">
@@ -24,7 +24,7 @@
     "@context": "https://schema.org",
     "@type": "BeautySalon",
     "name": "Antonia's Learning and Beauty Centre",
-    "image": "assets/badge.jpeg",
+    "image": "assets/salon-A.webp",
     "telephone": "+256705505474",
     "address": {
       "@type": "PostalAddress",
@@ -34,6 +34,14 @@
     "openingHours": "Mo-Sa 08:00-19:00"
   }
   </script>
+
+  <!-- PERF: preconnect to third-party origins before we need them -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- PERF: preload the hero LCP image so it starts downloading immediately, before CSS/JS parsing -->
+  <link rel="preload" as="image" href="assets/salon-A.webp" fetchpriority="high">
 
   <!-- Font Awesome Icons & Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -1461,7 +1469,7 @@
       <div class="badge-logo">
 
         <!-- UPDATED: real school badge photo replacing the SVG seal -->
-        <img class="school-badge-svg" src="assets/badge.jpeg" alt="Antonia's Learning &amp; Beauty Centre Official Badge">
+        <img class="school-badge-svg" src="assets/badge.jpeg" alt="Antonia's Learning &amp; Beauty Centre Official Badge" width="60" height="60" fetchpriority="low">
         <!-- Updated Title with "Learning &" -->
         <div class="brand-name">ANTONIAS<br><span style="font-size:0.78rem; font-weight:600; color:var(--primary);">Learning &amp; Beauty Centre</span></div>
       </div>
@@ -1497,10 +1505,13 @@
   <!-- HERO SECTION -->
   <section class="hero" id="home">
     <!-- Exactly 4 Hero Background Images -->
-    <div class="hero-bg active" style="background-image: url('assets/salon\ A.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
-    <div class="hero-bg" style="background-image: url('assets/Newstudents.jpg');background-size: cover; background-position: center; background-repeat: no-repeat; "></div>
-    <div class="hero-bg" style="background-image: url('assets/posrer2.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
-    <div class="hero-bg" style="background-image: url('assets/bridal.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+    <!-- PERF: only slide 1 loads immediately (it's the LCP image). Slides 2-4 use data-bg
+         and are only assigned a background-image by JS after the page has loaded, so they
+         don't compete with the first paint for bandwidth. -->
+    <div class="hero-bg active" style="background-image: url('assets/salon-A.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+    <div class="hero-bg" data-bg="assets/newstudents.webp" style="background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+    <div class="hero-bg" data-bg="assets/posrer2.jpeg" style="background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+    <div class="hero-bg" data-bg="assets/bridal.jpg" style="background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
     <div class="hero-overlay"></div>
     
     <!-- Hero Slider Arrow Navigation Controls -->
@@ -1541,7 +1552,7 @@
       <!-- 1. Skilling & Salon Management (now first) -->
       <div class="service-card bounce-in">
         <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
-          <img class="service-img" src="assets/learning22.jpg" data-alt="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Skilling & Entrepreneurship">
+          <img class="service-img" src="assets/learning22.jpg" data-alt="assets/learning22.jpg" alt="Skilling & Entrepreneurship" loading="lazy">
           <span class="service-badge">Tuyigiriza Abayizi</span>
         </div>
         <div class="service-info">
@@ -1554,7 +1565,7 @@
       <!-- 2. Hair Dressing -->
       <div class="service-card bounce-in">
         <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
-          <img class="service-img" src="assets/hairdressing2.jpg" data-alt="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=600&q=80" alt="Hair Dressing">
+          <img class="service-img" src="assets/hairdressing2.jpg" data-alt="assets/hairdressing2.jpg" alt="Hair Dressing" loading="lazy">
           <span class="service-badge">Tusiba Enviri Zonna</span>
         </div>
         <div class="service-info">
@@ -1567,7 +1578,7 @@
       <!-- 3. Bridal Styling -->
       <div class="service-card bounce-in">
         <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
-          <img class="service-img" src="assets/bridal.jpg" data-alt="assets/bridal.jpg" alt="Bridal Styling">
+          <img class="service-img" src="assets/bridal.jpg" data-alt="assets/bridal.jpg" alt="Bridal Styling" loading="lazy">
           <span class="service-badge">Tukola Ku Bagole</span>
         </div>
         <div class="service-info">
@@ -1580,7 +1591,7 @@
       <!-- 4. Professional Makeup -->
       <div class="service-card bounce-in">
         <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
-          <img class="service-img" src="assets/makeup.jpeg" data-alt="assets/makeup.jpg" alt="Makeup">
+          <img class="service-img" src="assets/makeup.jpeg" data-alt="assets/makeup.jpeg" alt="Makeup" loading="lazy">
           <span class="service-badge">Tukola Makeup</span>
         </div>
         <div class="service-info">
@@ -1593,7 +1604,7 @@
       <!-- 5. Nail Care -->
       <div class="service-card bounce-in">
         <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
-          <img class="service-img" src="assets/manicure.jpg" data-alt="assets/manicure.jpg" alt="Nail Care">
+          <img class="service-img" src="assets/manicure.jpg" data-alt="assets/manicure.jpg" alt="Nail Care" loading="lazy">
           <span class="service-badge">Tukola Enjala</span>
         </div>
         <div class="service-info">
@@ -1606,7 +1617,7 @@
       <!-- 6. Pedicure & Manicure — now falls into "View More" since it's 6th by new order -->
       <div class="service-card bounce-in hidden-service">
         <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
-          <img class="service-img" src="assets/manicure.jpeg" data-alt="assets/manicure.jpeg" alt="Pedicure and Manicure">
+          <img class="service-img" src="assets/manicure.jpeg" data-alt="assets/manicure.jpeg" alt="Pedicure and Manicure" loading="lazy">
           <span class="service-badge">Spa Care</span>
         </div>
         <div class="service-info">
@@ -1619,7 +1630,7 @@
       <!-- 7. Eye Lashes -->
       <div class="service-card bounce-in hidden-service">
         <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
-          <img class="service-img" src="assets/eyelashes.jpg" data-alt="assets/eyelashes.jpg" alt="Eye Lashes">
+          <img class="service-img" src="assets/eyelashes.jpg" data-alt="assets/eyelashes.jpg" alt="Eye Lashes" loading="lazy">
           <span class="service-badge">Lash Extensions</span>
         </div>
         <div class="service-info">
@@ -1632,7 +1643,7 @@
       <!-- 8. Jewelries -->
       <div class="service-card bounce-in hidden-service">
         <div class="service-img-wrapper" onclick="toggleServiceImg(this)">
-          <img class="service-img" src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" data-alt="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" alt="Jeweleries">
+          <img class="service-img" src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" data-alt="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="Jeweleries" loading="lazy">
           <span class="service-badge">Accessories</span>
         </div>
         <div class="service-info">
@@ -1805,9 +1816,9 @@
   <section class="section-padding container" id="about">
     <div class="about-wrapper">
       <div class="about-img-box bounce-in">
-        <img src="assets/salon A.jpeg" alt="Antonia Salon Interior">
+        <img src="assets/salon A.jpeg" alt="Antonia Salon Interior" loading="lazy">
         <!-- ADDED: second image that fades in on hover (see CSS .about-img-alt / JS hover listener) -->
-        <img class="about-img-alt" src="assets/poster A.jpeg" alt="Antonia Salon Students at Work">
+        <img class="about-img-alt" src="assets/poster A.jpeg" alt="Antonia Salon Students at Work" loading="lazy">
         <div class="about-experience-badge">
           Empowering<br>Girl Child
         </div>
@@ -2300,6 +2311,24 @@
     /* --- HERO BACKGROUND SLIDESHOW WITH 4 PHOTOS --- */
     const bgSlides = document.querySelectorAll('.hero-bg');
     let currentSlide = 0;
+
+    // PERF: lazy-load hero slides 2-4 only after the page has finished loading,
+    // so they never compete with the first hero image (the LCP element) for bandwidth.
+    function loadRemainingHeroSlides() {
+      bgSlides.forEach(slide => {
+        const bg = slide.getAttribute('data-bg');
+        if (bg) {
+          slide.style.backgroundImage = `url('${bg}')`;
+          slide.removeAttribute('data-bg');
+        }
+      });
+    }
+    if (document.readyState === 'complete') {
+      loadRemainingHeroSlides();
+    } else {
+      window.addEventListener('load', loadRemainingHeroSlides);
+    }
+
     let autoSlideInterval = setInterval(autoSlide, 3000);
 
     function showSlide(index) {
