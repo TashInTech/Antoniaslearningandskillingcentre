@@ -8,7 +8,7 @@
   <meta name="keywords" content="Salon Masaka, Hairdressing Uganda, Makeup Kimanya, Beauty School Masaka, Antonia Beauty Salon">
 
   <!-- ADDED: Favicon (uses the school badge colors) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23ffffff' stroke='%231d3557' stroke-width='4'/%3E%3Ctext x='50' y='58' font-size='40' text-anchor='middle' fill='%23d4af37'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23ffffff' stroke='%231d3557' stroke-width='4'/%3E%3Ctext x='50' y='58' font-size='40' text-anchor='middle' fill='%231565d8'%3EA%3C/text%3E%3C/svg%3E">
 
   <!-- ADDED: Open Graph / Social Share Tags -->
   <meta property="og:title" content="Antonias Learning and Beauty Centre | Kimanya - Masaka">
@@ -16,7 +16,7 @@
   <meta property="og:image" content="assets/badge.jpeg">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#d4af37">
+  <meta name="theme-color" content="#1565d8">
 
   <!-- ADDED: Local Business structured data for better Google search results -->
   <script type="application/ld+json">
@@ -26,19 +26,31 @@
     "name": "Antonia's Learning and Beauty Centre",
     "image": "assets/salon-A.webp",
     "telephone": "+256705505474",
+    "priceRange": "$$",
+    "areaServed": "Masaka, Uganda",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kimanya - Masaka",
       "addressCountry": "UG"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -0.3372,
+      "longitude": 31.7350
+    },
     "openingHours": "Mo-Sa 08:00-19:00"
   }
   </script>
+
+  <!-- ADDED: search-engine indexing hint -->
+  <meta name="robots" content="index, follow">
 
   <!-- PERF: preconnect to third-party origins before we need them -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preconnect" href="https://pub-f9aab72c5a7a45ae97577474af49f334.r2.dev" crossorigin>
 
   <!-- PERF: preload the hero LCP image so it starts downloading immediately, before CSS/JS parsing -->
   <link rel="preload" as="image" href="assets/salon-A.webp" fetchpriority="high">
@@ -50,27 +62,28 @@
   <style>
     /* --- CSS VARIABLES & THEMES --- */
     :root {
-      --primary: #d4af37; /* Gold accent */
-      --primary-hover: #b89628;
-      --secondary: #e91e63; /* Elegant pink */
+      --primary: #1565d8; /* Bright blue accent (was gold) */
+      --primary-hover: #0345a8;
+      --secondary: #ed155d; /* Elegant pink */
       --bg-color: #ffffff;
       --surface-color: #f8f9fa;
-      --text-color: #222222;
+      --text-color: #252121;
       --text-muted: #666666;
-      --border-color: #e0e0e0;
+      --border-color: #3bef59;
       --card-bg: #ffffff;
-      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --shadow: 0 10px 30px rgba(4, 180, 74, 0.1);
       --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
 
+    /* UPDATED: "dark" theme is now a second BRIGHT theme (light-to-light), no black backgrounds */
     [data-theme="dark"] {
-      --bg-color: #121212;
-      --surface-color: #1e1e1e;
-      --text-color: #f0f0f0;
-      --text-muted: #aaa;
-      --border-color: #333333;
-      --card-bg: #1e1e1e;
-      --shadow: 0 10px 30px rgba(0,0,0,0.5);
+      --bg-color: #eaf2ff;
+      --surface-color: #ffffff;
+      --text-color: #14213d;
+      --text-muted: #4a5a78;
+      --border-color: #cfe0fa;
+      --card-bg: #ffffff;
+      --shadow: 0 10px 30px rgba(21,101,216,0.18);
     }
 
     /* --- BASE STYLES --- */
@@ -155,7 +168,7 @@
     }
 
     [data-theme="dark"] header {
-      background-color: rgba(18, 18, 18, 0.95);
+      background-color: rgba(234, 242, 255, 0.95);
     }
 
     .nav-container {
@@ -179,7 +192,7 @@
       background: #ffffff;
       border-radius: 50%;
       border: 2px solid var(--primary);
-      box-shadow: 0 2px 6px rgba(212, 175, 55, 0.4);
+      box-shadow: 0 2px 6px rgba(21, 101, 216, 0.4);
       flex-shrink: 0;
       padding: 2px;
     }
@@ -281,7 +294,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.48) 100%);
+      background: linear-gradient(180deg, rgba(10,35,90,0.35) 0%, rgba(13,71,161,0.55) 100%);
       z-index: -1;
     }
 
@@ -323,7 +336,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(13, 71, 161, 0.45);
       color: #fff;
       border: 2px solid var(--primary);
       width: 50px;
@@ -341,7 +354,7 @@
 
     .hero-arrow:hover {
       background: var(--primary);
-      color: #000;
+      color: #fff;
     }
 
     .hero-arrow-left { left: 20px; }
@@ -411,7 +424,7 @@
 
     .btn-primary {
       background-color: var(--primary);
-      color: #000;
+      color: #fff;
       border: 2px solid var(--primary);
     }
 
@@ -428,7 +441,7 @@
 
     .btn-secondary:hover {
       background-color: #fff;
-      color: #000;
+      color: var(--primary);
     }
 
     /* --- SERVICES SECTION --- */
@@ -493,6 +506,7 @@
     .service-info h3 {
       font-size: 1.4rem;
       margin-bottom: 10px;
+      color: var(--secondary);
     }
 
     .service-info p {
@@ -535,7 +549,7 @@
       width: 70px;
       height: 70px;
       border-radius: 50%;
-      background: rgba(212, 175, 55, 0.15);
+      background: rgba(21, 101, 216, 0.15);
       color: var(--primary);
       display: flex;
       align-items: center;
@@ -586,7 +600,7 @@
       width: 56px;
       height: 56px;
       border-radius: 50%;
-      background: rgba(212, 175, 55, 0.2);
+      background: rgba(21, 101, 216, 0.2);
       color: var(--primary);
       display: flex;
       align-items: center;
@@ -835,7 +849,7 @@
       bottom: -20px;
       right: -20px;
       background: var(--primary);
-      color: #000;
+      color: #fff;
       padding: 20px;
       border-radius: 12px;
       font-weight: bold;
@@ -894,7 +908,7 @@
       padding: 3px 10px;
       border-radius: 12px;
       margin-bottom: 12px;
-      background: rgba(212, 175, 55, 0.15);
+      background: rgba(21, 101, 216, 0.15);
       color: var(--primary);
     }
 
@@ -1046,7 +1060,7 @@
 
     .faq-question.active {
       color: var(--primary);
-      background-color: rgba(212, 175, 55, 0.05);
+      background-color: rgba(21, 101, 216, 0.05);
     }
 
     .faq-answer {
@@ -1129,7 +1143,7 @@
       font-size: 1.1rem;
       font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+      box-shadow: 0 0 15px rgba(21, 101, 216, 0.5);
       animation: glowing 2s infinite;
       transition: var(--transition);
     }
@@ -1159,7 +1173,7 @@
       height: 45px;
       border-radius: 50%;
       background: var(--primary);
-      color: #000;
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1230,7 +1244,7 @@
 
     .float-call {
       background-color: var(--primary);
-      color: #000;
+      color: #fff;
     }
 
     @keyframes floatGlow {
@@ -1377,7 +1391,7 @@
       left: -999px;
       top: 0;
       background: var(--primary);
-      color: #000;
+      color: #fff;
       padding: 10px 16px;
       z-index: 10000;
       border-radius: 0 0 8px 0;
@@ -1396,7 +1410,7 @@
       height: 46px;
       border-radius: 50%;
       background: var(--primary);
-      color: #000;
+      color: #fff;
       border: none;
       font-size: 1.2rem;
       cursor: pointer;
@@ -1522,11 +1536,11 @@
       <!-- ADDED: continuously scrolling description, right-to-left, seamless loop -->
       <div class="hero-desc-track-wrap">
         <div class="hero-desc-track">
-          <span>Empowering Uganda's Girl Child Through Hairdressing, Makeup, Bridal Styling &amp; Salon Management — Start Earning In Just 2 Months.</span>
-          <span>Empowering Uganda's Girl Child Through Hairdressing, Makeup, Bridal Styling &amp; Salon Management — Start Earning In Just 2 Months.</span>
+          <span style="color: var(--secondary);">Empowering Uganda's Girl Child Through Hairdressing, Makeup, Bridal Styling &amp; Salon Management — Start Earning In Just 2 Months.</span>
+          <span style="color: var(--secondary);">Empowering Uganda's Girl Child Through Hairdressing, Makeup, Bridal Styling &amp; Salon Management — Start Earning In Just 2 Months.</span>
         </div>
       </div>
-      <h1 class="hero-title-main">ANTONIAS</h1>
+      <h1 class="hero-title-main" style="color: var(--secondary);">ANTONIAS</h1>
       <div class="typewriter-container">
         <span id="typewriterText"></span><span class="cursor"></span>
       </div>
@@ -1542,7 +1556,7 @@
   <section class="section-padding container" id="services">
     <div class="section-title bounce-in">
       <h2>Our Premium Services</h2>
-      <p>Restoring Diginity And Livelyhood through Practical hands-on skills Training In cosmetology Among
+      <p style="color: var(--secondary);">Restoring Diginity And Livelyhood through Practical hands-on skills Training In cosmetology Among
          The Unemployed youth, Young Single Mothers, School Dropouts, orphans And Women Exiting Prostitution.</p>
     </div>
     <!-- UPDATED: reordered per client request — Skilling first, then Hair Dressing, Bridal Styling,
@@ -1664,7 +1678,7 @@
     <div class="container">
       <div class="section-title bounce-in">
         <h2>Why Choose Antonia's</h2>
-        <p>Assured Employment After Learning, Earn in 2 Months, Bursaries & Support, Professional Elegance, Salon Management &amp; Empowering individuals while providing top-tier beauty care</p>
+        <p style="color: var(--secondary);">Assured Employment After Learning, Earn in 2 Months, Bursaries & Support, Professional Elegance, Salon Management &amp; Empowering individuals while providing top-tier beauty care</p>
       </div>
       <div class="features-grid">
         <!-- ADDED: new first card -->
@@ -1702,7 +1716,7 @@
     <div class="container">
       <div class="section-title bounce-in">
         <h2>Our Challenges</h2>
-        <p>We are proud of how far Antonia's has come, but honesty matters just as much as pride. Here is what we are up against — and why your support can change a girl's story.</p>
+        <p style="color: var(--secondary);">We are proud of how far Antonia's has come, but honesty matters just as much as pride. Here is what we are up against — and why your support can change a girl's story.</p>
       </div>
       <div class="challenges-grid">
         <div class="challenge-card bounce-in">
@@ -1747,7 +1761,7 @@
       <div class="support-tabs">
         <button class="support-tab-btn active" data-provider="mtn" onclick="switchSupportTab('supportMtnTab', this)">MTN MoMo</button>
         <button class="support-tab-btn" data-provider="airtel" onclick="switchSupportTab('supportAirtelTab', this)">Airtel Pay</button>
-        <button class="support-tab-btn" data-provider="bank" onclick="switchSupportTab('supportBankTab', this)">Stanbic Bank</button>
+        <button class="support-tab-btn" data-provider="bank" onclick="switchSupportTab('supportBankTab', this)">Tropical Bank</button>
       </div>
 
       <!-- MTN -->
@@ -1782,18 +1796,18 @@
         <button type="button" class="btn btn-block btn-pay-copy" onclick="copySupportCode('7185846','Airtel Merchant Code')">Copy Merchant Code (7185846)</button>
       </div>
 
-      <!-- Stanbic Bank -->
+      <!-- Tropical Bank -->
       <div id="supportBankTab" class="support-tab-content">
-        <!-- TEMP: Preston's own account, standing in until Antonia's own Stanbic account is confirmed — swap before launch -->
+        <!-- Bank name and account name are confirmed for Antonia's Learning and Skilling Centre. Account number is pending from the bank — update SUPPORT_BANK_ACCOUNT and the fields below once it's issued. -->
         <div class="support-bank-details">
-          <p><strong>Bank Name:</strong> Stanbic Bank Uganda</p>
-          <p><strong>Account Name:</strong> <span id="supportBankNameDisplay">Tash In Tech Web Solutions</span></p>
-          <p><strong>Account Number:</strong> <span id="supportBankAccDisplay">9030025103385</span></p>
+          <p><strong>Bank Name:</strong> Tropical Bank Uganda</p>
+          <p><strong>Account Name:</strong> <span id="supportBankNameDisplay">Antonias Learning and Skilling Centre</span></p>
+          <p><strong>Account Number:</strong> <span id="supportBankAccDisplay">Not yet provided — you can use Mobile Money for now</span></p>
         </div>
 
         <a href="tel:*185*7*1%23" class="btn btn-block btn-pay-airtel">Pay via Airtel Mobile-to-Bank (*185#)</a>
         <a href="tel:*165*6%23" class="btn btn-block btn-pay-mtn">Pay via MTN Mobile-to-Bank (*165#)</a>
-        <button type="button" class="btn btn-block btn-pay-copy" onclick="copySupportCode('9030025103385','Stanbic Account Number')">Copy Bank Account Number</button>
+        <button type="button" class="btn btn-block btn-pay-copy" onclick="copySupportCode('Antonias Learning and Skilling Centre','Account Name')">Copy Account Name</button>
 
         <hr style="margin:20px 0; border:0; border-top:1px solid var(--border-color);">
 
@@ -1825,7 +1839,7 @@
       </div>
       <div class="about-text bounce-in">
         <h3>Transforming Beauty into Self-Reliance</h3>
-        <p>Located in <strong>Kimanya - Masaka, Uganda, East Africa</strong>, <strong>Antonia's Learning and Beauty Centre</strong> is dedicated to delivering world-class hair, makeup, and body care services while empowering the community.</p>
+        <p>Located in <strong style="color: var(--secondary);">Kimanya - Masaka, Uganda, East Africa</strong>, <strong style="color: var(--secondary);">Antonia's Learning and Beauty Centre</strong> is dedicated to delivering world-class hair, makeup, and body care services while empowering the community.</p>
         <p>Our mission focuses heavily on equipping the girl child with practical, income-generating skills. Through our bursary schemes and flexible budget programs, every ambitious student can learn, build self-reliance, and launch a successful career in beauty and entrepreneurship.</p>
         <p>Whether you visit us for a glam makeup transformation, bridal styling, or to study salon management, we guarantee elegance, professionalism, and warm hospitality.</p>
       </div>
@@ -1838,7 +1852,7 @@
       <div class="section-title bounce-in">
         <h2>Client &amp; Student Testimonials</h2>
         <!-- ADDED: sympathetic subheading -->
-        <p class="testimonials-subheading">Many of our students arrive with nothing but courage: girls abandoned by men, single mothers, others who stopped school in P7 for lack of fees, orphans, and girls whose parents simply could not afford to educate them at all. Antonia's gives every one of them a skill, an income, and a fresh start. Tap any card to pause/play the scrolling testimonials.</p>
+        <p class="testimonials-subheading" style="color: var(--secondary);">Many of our students arrive with nothing but courage: girls abandoned by men, single mothers, others who stopped school in P7 for lack of fees, orphans, and girls whose parents simply could not afford to educate them at all. Antonia's gives every one of them a skill, an income, and a fresh start. Tap any card to pause/play the scrolling testimonials.</p>
       </div>
     </div>
     <div class="marquee-container bounce-in">
@@ -2014,7 +2028,7 @@
   <section class="section-padding container" id="gallery">
     <div class="section-title bounce-in">
       <h2>Our Gallery</h2>
-      <p>A glimpse of our students, our salon floor, and the work we're proud of</p>
+      <p style="color: var(--secondary);">A glimpse of our students, our salon floor, and the work we're proud of</p>
     </div>
 
     <h3 class="gallery-subtitle bounce-in">Photos</h3>
@@ -2060,7 +2074,7 @@
   <section class="section-padding container" id="faq">
     <div class="section-title bounce-in">
       <h2>Frequently Asked Questions</h2>
-      <p>Everything you need to know about our services and vocational skilling program</p>
+      <p style="color: var(--secondary);">Everything you need to know about our services and vocational skilling program</p>
     </div>
     <div class="faq-accordion bounce-in">
       <div class="faq-item">
@@ -2071,9 +2085,9 @@
         <div class="faq-answer">
           <p>At Antonia's Learning &amp; Beauty Centre, our practical curriculum is structured for rapid skill acquisition:</p>
           <ul>
-            <li><strong>Intensive Hands-on Training:</strong> Students get real practical practice from day one on hairdressing, makeup, and nail care.</li>
-            <li><strong>Earning within 2 Months:</strong> Within just 60 days of enrollment, students gain sufficient proficiency to serve paid clients or start working under guidance while continuing advanced entrepreneurship and salon management modules.</li>
-            <li><strong>Pay-After-Gaining-Skills Option:</strong> We also facilitate flexible payment plans where students can pay tuition balance after they begin earning.</li>
+            <li><strong style="color: var(--secondary);">Intensive Hands-on Training:</strong> Students get real practical practice from day one on hairdressing, makeup, and nail care.</li>
+            <li><strong style="color: var(--secondary);">Earning within 2 Months:</strong> Within just 60 days of enrollment, students gain sufficient proficiency to serve paid clients or start working under guidance while continuing advanced entrepreneurship and salon management modules.</li>
+            <li><strong style="color: var(--secondary);">Pay-After-Gaining-Skills Option:</strong> We also facilitate flexible payment plans where students can pay tuition balance after they begin earning.</li>
           </ul>
         </div>
       </div>
@@ -2085,9 +2099,9 @@
         <div class="faq-answer">
           <p>Yes, bursaries are a core part of our empowerment mission for the girl child:</p>
           <ul>
-            <li><strong>Financial Support &amp; Bursaries:</strong> We offer dedicated bursaries to vulnerable and ambitious students to reduce tuition burdens.</li>
-            <li><strong>Flexible Budget Learning:</strong> Anyone who desires to learn can be taught according to their individual budget.</li>
-            <li><strong>Complete Entrepreneurship Package:</strong> Tuition includes practical training, customer care, and salon management skills for total independence.</li>
+            <li><strong style="color: var(--secondary);">Financial Support &amp; Bursaries:</strong> We offer dedicated bursaries to vulnerable and ambitious students to reduce tuition burdens.</li>
+            <li><strong style="color: var(--secondary);">Flexible Budget Learning:</strong> Anyone who desires to learn can be taught according to their individual budget.</li>
+            <li><strong style="color: var(--secondary);">Complete Entrepreneurship Package:</strong> Tuition includes practical training, customer care, and salon management skills for total independence.</li>
           </ul>
         </div>
       </div>
@@ -2099,9 +2113,9 @@
         <div class="faq-answer">
           <p>For bridal styling (Tukola Ku Bagole), advance booking is recommended to guarantee quality service:</p>
           <ul>
-            <li><strong>Timely Reservations:</strong> We advise booking 1 to 2 weeks in advance to allow time for bridal trials, theme matching, and scheduling.</li>
-            <li><strong>Full Package Inclusions:</strong> Our bridal team provides hair styling, high-definition makeup, matching jewelry sets, and bridesmaid styling.</li>
-            <li><strong>On-Site or Mobile Service:</strong> We cater to brides both at our salon in Kimanya - Masaka and directly at event venues upon request.</li>
+            <li><strong style="color: var(--secondary);">Timely Reservations:</strong> We advise booking 1 to 2 weeks in advance to allow time for bridal trials, theme matching, and scheduling.</li>
+            <li><strong style="color: var(--secondary);">Full Package Inclusions:</strong> Our bridal team provides hair styling, high-definition makeup, matching jewelry sets, and bridesmaid styling.</li>
+            <li><strong style="color: var(--secondary);">On-Site or Mobile Service:</strong> We cater to brides both at our salon in Kimanya - Masaka and directly at event venues upon request.</li>
           </ul>
         </div>
       </div>
@@ -2113,9 +2127,9 @@
         <div class="faq-answer">
           <p>We are conveniently situated in <strong>Kimanya - Masaka, Uganda</strong>:</p>
           <ul>
-            <li><strong>WhatsApp &amp; Booking Line:</strong> 0705 505 474 (Instant booking and inquiry response).</li>
-            <li><strong>Direct Phone Support:</strong> Call us anytime on 0781 704 061 or 0749 479 749.</li>
-            <li><strong>Working Hours:</strong> Open Monday to Saturday from 8:00 AM to 7:00 PM. Walk-ins and appointments are welcome.</li>
+            <li><strong style="color: var(--secondary);">WhatsApp &amp; Booking Line:</strong> 0705 505 474 (Instant booking and inquiry response).</li>
+            <li><strong style="color: var(--secondary);">Direct Phone Support:</strong> Call us anytime on 0781 704 061 or 0749 479 749.</li>
+            <li><strong style="color: var(--secondary);">Working Hours:</strong> Open Monday to Saturday from 8:00 AM to 7:00 PM. Walk-ins and appointments are welcome.</li>
           </ul>
         </div>
       </div>
@@ -2126,7 +2140,7 @@
   <section class="section-padding container" id="booking">
     <div class="section-title bounce-in">
       <h2>Book Service / Student Registration</h2>
-      <p>Fill out the form below; you will be contacted sooner than later!</p>
+      <p style="color: var(--secondary);">Fill out the form below; you will be contacted sooner than later!</p>
     </div>
     <div class="booking-wrapper bounce-in">
       <form id="bookingForm" action="https://formsubmit.co/antoniaslearningbeautycentre@gmail.com" method="POST">
@@ -2189,22 +2203,22 @@
   <!-- CONTACT SECTION -->
   <section class="section-padding container" id="contact">
     <div class="section-title bounce-in">
-      <h2>Contact Us</h2>
-      <p>Get in touch or visit our beauty centre in Masaka</p>
+      <h2 >Contact Us</h2>
+      <p style="color: var(--secondary);">Get in touch or visit our beauty centre in Masaka</p>
     </div>
     <div class="contact-grid bounce-in">
       <div>
         <div class="contact-info-card">
           <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
           <div>
-            <h4>Location</h4>
+            <h4 style="color: var(--secondary);">Location</h4>
             <p>Kimanya - Masaka, Uganda</p>
           </div>
         </div>
         <div class="contact-info-card">
           <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
           <div>
-            <h4>Phone Lines</h4>
+            <h4 style="color: var(--secondary);">Phone Lines</h4>
             <p><a href="tel:0705505474">0705 505 474</a> (WhatsApp / Booking)</p>
             <p><a href="tel:0781704061">0781 704 061</a> / <a href="tel:0749479749">0749 479 749</a></p>
           </div>
@@ -2212,7 +2226,7 @@
         <div class="contact-info-card">
           <div class="contact-icon"><i class="fas fa-envelope"></i></div>
           <div>
-            <h4>Email</h4>
+            <h4 style="color: var(--secondary);">Email</h4>
             <p>antoniaslearningbeautycentre@gmail.com</p>
           </div>
         </div>
@@ -2227,12 +2241,12 @@
   <footer>
     <div class="container footer-content">
       <div>
-        <h3>ANTONIAS</h3>
+        <h3 style="color: var(--secondary);">ANTONIAS</h3>
         <p>Skilling For Self Reliance.</p>
         <p style="margin-top:10px; font-size:0.85rem; color:#888;">Empowering young women through skilling &amp; practical salon management.</p>
       </div>
       <div>
-        <h4>Quick Links</h4>
+        <h4 style="color: var(--secondary);">Quick Links</h4>
         <ul style="line-height:2;">
           <li><a href="#home">Home</a></li>
           <li><a href="#services">Services</a></li>
@@ -2241,7 +2255,7 @@
         </ul>
       </div>
       <div>
-        <h4>Location &amp; Contacts</h4>
+        <h4 style="color: var(--secondary);">Location &amp; Contacts</h4>
         <p>Kimanya - Masaka, Uganda</p>
         <p>Tel: 0705 505 474 / 0781 704 061</p>
       </div>
@@ -2650,16 +2664,18 @@
 
     /* --- SUPPORT / CONTRIBUTE MODAL --- */
     (function() {
-      // TEMP (Preston): these are Preston's own TashInTech merchant/account details,
-      // used only as a stand-in so the widget is fully working end-to-end.
-      // Swap all three for Antonia's own MTN code, Airtel code and Stanbic account
-      // before this goes live, so contributions land in Antonia's account.
+      // TEMP (Preston): MTN and Airtel merchant details below are Preston's own TashInTech
+      // codes, used only as a stand-in so the widget is fully working end-to-end.
+      // Swap the MTN code and Airtel code for Antonia's own before this goes live.
+      // Bank name and account name are Antonia's confirmed Tropical Bank details;
+      // the account number is still pending from the bank — Mobile Money is offered
+      // meanwhile. Fill in SUPPORT_BANK_ACCOUNT once the bank issues it.
       const SUPPORT_MTN_CODE = '83125827';
       const SUPPORT_MTN_NAME = 'Tash In Tech Web Solutions';
       const SUPPORT_AIRTEL_CODE = '7185846';
       const SUPPORT_AIRTEL_NAME = 'Tash In Tech Web Solutions';
-      const SUPPORT_BANK_ACCOUNT = '9030025103385';
-      const SUPPORT_BANK_NAME = 'Tash In Tech Web Solutions';
+      const SUPPORT_BANK_ACCOUNT = ''; // not yet provided by Tropical Bank
+      const SUPPORT_BANK_NAME = 'Antonias Learning and Skilling Centre';
       const SUPPORT_WHATSAPP = '256705505474';
 
       window.openSupportModal = function(e) {
@@ -2718,7 +2734,7 @@
           return;
         }
 
-        const message = `Hello Antonia's Learning & Beauty Centre, I have made a Stanbic Bank contribution.%0A%0A` +
+        const message = `Hello Antonia's Learning & Beauty Centre, I have made a Tropical Bank contribution.%0A%0A` +
                         `*Donor Name:* ${encodeURIComponent(name)}%0A` +
                         `*Reference/ID:* ${encodeURIComponent(ref)}`;
 
