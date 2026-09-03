@@ -5,14 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery | Antonia's Learning and Beauty Centre</title>
   <meta name="description" content="Photo and video gallery of Antonia's Learning and Beauty Centre — hairdressing, makeup, bridal styling and salon management skilling in Kimanya, Masaka.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23ffffff' stroke='%231d3557' stroke-width='4'/%3E%3Ctext x='50' y='58' font-size='40' text-anchor='middle' fill='%23d4af37'%3EA%3C/text%3E%3C/svg%3E">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1565d8">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23ffffff' stroke='%231d3557' stroke-width='4'/%3E%3Ctext x='50' y='58' font-size='40' text-anchor='middle' fill='%231565d8'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     /* --- CSS VARIABLES & THEMES --- */
     :root {
-      --primary: #d4af37; /* Gold accent */
-      --primary-hover: #b89628;
+      --primary: #1565d8; /* Bright blue accent (was gold) */
+      --primary-hover: #0d47a1;
       --secondary: #e91e63; /* Elegant pink */
       --bg-color: #ffffff;
       --surface-color: #f8f9fa;
@@ -20,18 +25,19 @@
       --text-muted: #666666;
       --border-color: #e0e0e0;
       --card-bg: #ffffff;
-      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --shadow: 0 10px 30px rgba(7, 17, 30, 0.1);
       --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
 
+    /* UPDATED: "dark" theme is now a second BRIGHT theme (light-to-light), no black backgrounds */
     [data-theme="dark"] {
-      --bg-color: #121212;
-      --surface-color: #1e1e1e;
-      --text-color: #f0f0f0;
-      --text-muted: #aaa;
-      --border-color: #333333;
-      --card-bg: #1e1e1e;
-      --shadow: 0 10px 30px rgba(0,0,0,0.5);
+      --bg-color: #eaf2ff;
+      --surface-color: #ffffff;
+      --text-color: #14213d;
+      --text-muted: #4a5a78;
+      --border-color: #cfe0fa;
+      --card-bg: #ffffff;
+      --shadow: 0 10px 30px rgba(21,101,216,0.18);
     }
 
     /* --- BASE STYLES --- */
@@ -116,7 +122,7 @@
     }
 
     [data-theme="dark"] header {
-      background-color: rgba(18, 18, 18, 0.95);
+      background-color: rgba(234, 242, 255, 0.95);
     }
 
     .nav-container {
@@ -140,7 +146,7 @@
       background: #ffffff;
       border-radius: 50%;
       border: 2px solid var(--primary);
-      box-shadow: 0 2px 6px rgba(212, 175, 55, 0.4);
+      box-shadow: 0 2px 6px rgba(21, 101, 216, 0.4);
       flex-shrink: 0;
       padding: 2px;
     }
@@ -302,7 +308,7 @@
 
     .hero-arrow:hover {
       background: var(--primary);
-      color: #000;
+      color: #fff;
     }
 
     .hero-arrow-left { left: 20px; }
@@ -371,7 +377,7 @@
 
     .btn-primary {
       background-color: var(--primary);
-      color: #000;
+      color: #fff;
       border: 2px solid var(--primary);
     }
 
@@ -388,7 +394,7 @@
 
     .btn-secondary:hover {
       background-color: #fff;
-      color: #000;
+      color: var(--primary);
     }
 
     /* --- SERVICES SECTION --- */
@@ -495,7 +501,7 @@
       width: 70px;
       height: 70px;
       border-radius: 50%;
-      background: rgba(212, 175, 55, 0.15);
+      background: rgba(21, 101, 216, 0.15);
       color: var(--primary);
       display: flex;
       align-items: center;
@@ -546,7 +552,7 @@
       width: 56px;
       height: 56px;
       border-radius: 50%;
-      background: rgba(212, 175, 55, 0.2);
+      background: rgba(21, 101, 216, 0.2);
       color: var(--primary);
       display: flex;
       align-items: center;
@@ -729,7 +735,7 @@
       bottom: -20px;
       right: -20px;
       background: var(--primary);
-      color: #000;
+      color: #fff;
       padding: 20px;
       border-radius: 12px;
       font-weight: bold;
@@ -788,7 +794,7 @@
       padding: 3px 10px;
       border-radius: 12px;
       margin-bottom: 12px;
-      background: rgba(212, 175, 55, 0.15);
+      background: rgba(21, 101, 216, 0.15);
       color: var(--primary);
     }
 
@@ -940,7 +946,7 @@
 
     .faq-question.active {
       color: var(--primary);
-      background-color: rgba(212, 175, 55, 0.05);
+      background-color: rgba(21, 101, 216, 0.05);
     }
 
     .faq-answer {
@@ -1023,7 +1029,7 @@
       font-size: 1.1rem;
       font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+      box-shadow: 0 0 15px rgba(21, 101, 216, 0.5);
       animation: glowing 2s infinite;
       transition: var(--transition);
     }
@@ -1053,7 +1059,7 @@
       height: 45px;
       border-radius: 50%;
       background: var(--primary);
-      color: #000;
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1124,7 +1130,7 @@
 
     .float-call {
       background-color: var(--primary);
-      color: #000;
+      color: #fff;
     }
 
     @keyframes floatGlow {
@@ -1271,7 +1277,7 @@
       left: -999px;
       top: 0;
       background: var(--primary);
-      color: #000;
+      color: #fff;
       padding: 10px 16px;
       z-index: 10000;
       border-radius: 0 0 8px 0;
@@ -1290,7 +1296,7 @@
       height: 46px;
       border-radius: 50%;
       background: var(--primary);
-      color: #000;
+      color: #fff;
       border: none;
       font-size: 1.2rem;
       cursor: pointer;
@@ -1360,7 +1366,7 @@
       backdrop-filter: blur(10px);
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    [data-theme="dark"] .gallery-page-header { background-color: rgba(18,18,18,0.95); }
+    [data-theme="dark"] .gallery-page-header { background-color: rgba(234,242,255,0.95); }
     .gallery-page-header .nav-container { justify-content: space-between; }
     .gallery-page-main { padding-top: 110px; }
     .back-home-link {
@@ -1390,7 +1396,7 @@
   <main class="gallery-page-main container section-padding">
     <div class="section-title bounce-in visible">
       <h2>Our Full Gallery</h2>
-      <p>More photos and videos from Antonia's Learning and Beauty Centre</p>
+      <p style="color: var(--secondary);">More photos and videos from Antonia's Learning and Beauty Centre</p>
     </div>
 
     <h3 class="gallery-subtitle" id="photos">Photos</h3>
@@ -1450,12 +1456,12 @@
   <footer>
     <div class="container footer-content">
       <div>
-        <h3>ANTONIAS</h3>
+        <h3 style="color: var(--secondary);">ANTONIAS</h3>
         <p>Skilling For Self Reliance.</p>
         <p style="margin-top:10px; font-size:0.85rem; color:#888;">Empowering young women through skilling &amp; practical salon management.</p>
       </div>
       <div>
-        <h4>Quick Links</h4>
+        <h4 style="color: var(--secondary);">Quick Links</h4>
         <ul style="line-height:2;">
           <li><a href="index.html#home">Home</a></li>
           <li><a href="index.html#services">Services</a></li>
@@ -1464,7 +1470,7 @@
         </ul>
       </div>
       <div>
-        <h4>Location &amp; Contacts</h4>
+        <h4 style="color: var(--secondary);">Location &amp; Contacts</h4>
         <p>Kimanya - Masaka, Uganda</p>
         <p>Tel: 0705 505 474 / 0781 704 061</p>
       </div>
