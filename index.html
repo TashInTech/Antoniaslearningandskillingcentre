@@ -1757,7 +1757,7 @@
   <div class="support-modal-backdrop" id="supportModalBackdrop" onclick="if(event.target===this) closeSupportModal()">
     <div class="support-modal" role="dialog" aria-modal="true" aria-labelledby="supportModalTitle">
       <button class="support-modal-close" onclick="closeSupportModal()" aria-label="Close">&times;</button>
-      <h3 id="supportModalTitle">Thanking You For The Love Of Investing In Skills That Contribute To Growth Of Our Country and East Africa at large</h3>
+      <h3 id="supportModalTitle">Thank You For The Love Of Investing In Skills That Contribute To Growth Of Our Country and East Africa at large</h3>
 
       <div class="support-tabs">
         <button class="support-tab-btn active" data-provider="mtn" onclick="switchSupportTab('supportMtnTab', this)">MTN MoMo</button>
@@ -1772,13 +1772,12 @@
           <input type="number" id="supportMtnAmount" class="form-control" value="10000" min="500" oninput="updateSupportUSSD()">
         </div>
         <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">
-          <!-- TEMP: Preston's own TashInTech merchant code, standing in until Antonia's own code is confirmed — swap before launch -->
-          <strong>Merchant Name:</strong> <span id="supportMtnNameDisplay">Tash In Tech Web Solutions</span><br>
-          <strong>Merchant Code:</strong> <span id="supportMtnCodeDisplay">83125827</span>
+          <strong>Merchant Name:</strong> <span id="supportMtnNameDisplay">Lawrence - Antonias learning and beauty centre </span><br>
+          <strong>Merchant Code:</strong> <span id="supportMtnCodeDisplay">65288144</span>
         </p>
-        <div id="supportMtnUssdDisplay" class="support-ussd-box ussd-mtn">*165*3*83125827*10000#</div>
+        <div id="supportMtnUssdDisplay" class="support-ussd-box ussd-mtn">*165*3*65288144*10000#</div>
         <a href="#" class="btn btn-block btn-pay-mtn" onclick="triggerSupportDial('mtn')">Tap To Pay Via MTN</a>
-        <button type="button" class="btn btn-block btn-pay-copy" onclick="copySupportCode('83125827','MTN Merchant Code')">Copy Merchant Code (83125827)</button>
+        <button type="button" class="btn btn-block btn-pay-copy" onclick="copySupportCode('65288144','MTN Merchant Code')">Copy Merchant Code (65288144)</button>
       </div>
 
       <!-- Airtel -->
@@ -1788,13 +1787,13 @@
           <input type="number" id="supportAirtelAmount" class="form-control" value="10000" min="500" oninput="updateSupportUSSD()">
         </div>
         <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">
-          <!-- TEMP: Preston's own TashInTech merchant code, standing in until Antonia's own code is confirmed — swap before launch -->
-          <strong>Merchant Name:</strong> <span id="supportAirtelNameDisplay">Tash In Tech Web Solutions</span><br>
-          <strong>Merchant Code:</strong> <span id="supportAirtelCodeDisplay">7185846</span>
+        
+          <strong>Merchant Name:</strong> <span id="supportAirtelNameDisplay">Antonias learning and skilling centre</span><br>
+          <strong>Merchant Code:</strong> <span id="supportAirtelCodeDisplay">7198871</span>
         </p>
-        <div id="supportAirtelUssdDisplay" class="support-ussd-box ussd-airtel">*185*9*7185846*10000#</div>
+        <div id="supportAirtelUssdDisplay" class="support-ussd-box ussd-airtel">*185*9*7198871*10000#</div>
         <a href="#" class="btn btn-block btn-pay-airtel" onclick="triggerSupportDial('airtel')">Tap To Pay Via Airtel</a>
-        <button type="button" class="btn btn-block btn-pay-copy" onclick="copySupportCode('7185846','Airtel Merchant Code')">Copy Merchant Code (7185846)</button>
+        <button type="button" class="btn btn-block btn-pay-copy" onclick="copySupportCode('7198871','Airtel Merchant Code')">Copy Merchant Code (7198871)</button>
       </div>
 
       <!-- Tropical Bank -->
