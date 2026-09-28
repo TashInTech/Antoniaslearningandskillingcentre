@@ -1763,7 +1763,7 @@
       <div class="support-tabs">
         <button class="support-tab-btn active" data-provider="mtn" onclick="switchSupportTab('supportMtnTab', this)">MTN MoMo</button>
         <button class="support-tab-btn" data-provider="airtel" onclick="switchSupportTab('supportAirtelTab', this)">Airtel Pay</button>
-        <button class="support-tab-btn" data-provider="bank" onclick="switchSupportTab('supportBankTab', this)">Tropical Bank</button>
+        <button class="support-tab-btn" data-provider="bank" onclick="switchSupportTab('supportBankTab', this)">Housing Finance Bank</button>
       </div>
 
       <!-- MTN -->
@@ -1801,13 +1801,14 @@
       <div id="supportBankTab" class="support-tab-content">
         <!-- Bank name and account name are confirmed for Antonia's Learning and Skilling Centre. Account number is pending from the bank — update SUPPORT_BANK_ACCOUNT and the fields below once it's issued. -->
         <div class="support-bank-details">
-          <p><strong>Bank Name:</strong> Tropical Bank Uganda</p>
-          <p><strong>Account Name:</strong> <span id="supportBankNameDisplay">Antonias Learning and Skilling Centre</span></p>
-          <p><strong>Account Number:</strong> <span id="supportBankAccDisplay">Not yet provided — you can use Mobile Money for now</span></p>
+            <p><strong>Bank Name:</strong> Housing Finance Bank</p>
+            <p><strong>Account Name:</strong> <span id="supportBankNameDisplay">Antonias Learning Centre</span></p>
+            <p><strong>Account Number:</strong> <span id="supportBankAccDisplay">1240000194028</span></p>
+            <p><strong>SWIFT Code:</strong> HFINUGKAXXX</p>
         </div>
 
-        <a href="tel:*185*7*1%23" class="btn btn-block btn-pay-airtel">Pay via Airtel Mobile-to-Bank (*185#)</a>
-        <a href="tel:*165*6%23" class="btn btn-block btn-pay-mtn">Pay via MTN Mobile-to-Bank (*165#)</a>
+        <button type="button" class="btn btn-block btn-pay-copy" onclick="copySupportCode('1240000194028','Account Number')">Copy Account Number</button>
+        <button type="button" class="btn btn-block btn-pay-copy" onclick="copySupportCode('HFINUGKAXXX','SWIFT Code')">Copy SWIFT Code</button>
         <button type="button" class="btn btn-block btn-pay-copy" onclick="copySupportCode('Antonias Learning and Skilling Centre','Account Name')">Copy Account Name</button>
 
         <hr style="margin:20px 0; border:0; border-top:1px solid var(--border-color);">
@@ -2672,8 +2673,8 @@
       const SUPPORT_MTN_NAME = 'Lawrence -Antonias learning and skilling centre';
       const SUPPORT_AIRTEL_CODE = '7198871';
       const SUPPORT_AIRTEL_NAME = 'Antonias learning and skilling centre';
-      const SUPPORT_BANK_ACCOUNT = ''; // not yet provided by Tropical Bank
-      const SUPPORT_BANK_NAME = 'Antonias Learning and Skilling Centre';
+      const SUPPORT_BANK_ACCOUNT = '1240000194028';
+      const SUPPORT_BANK_NAME = 'Housing Finance Bank';
       const SUPPORT_WHATSAPP = '256705505474';
 
       window.openSupportModal = function(e) {
@@ -2732,7 +2733,7 @@
           return;
         }
 
-        const message = `Hello Antonia's Learning & Beauty Centre, I have made a Tropical Bank contribution.%0A%0A` +
+        const message = `Hello Antonia's Learning & Beauty Centre, I have made a Housing Finance Bank contribution.%0A%0A` +
                         `*Donor Name:* ${encodeURIComponent(name)}%0A` +
                         `*Reference/ID:* ${encodeURIComponent(ref)}`;
 
