@@ -1163,6 +1163,71 @@
       gap: 40px;
     }
 
+    .application-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+      margin: 20px auto 18px;
+      max-width: 760px;
+    }
+
+    .app-action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-width: 260px;
+      padding: 18px 26px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.02rem;
+      transition: var(--transition);
+      text-align: center;
+      border: 2px solid transparent;
+    }
+
+    .app-action-btn i {
+      font-size: 1.35rem;
+    }
+
+    .app-action-btn.primary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      box-shadow: 0 12px 28px rgba(21, 101, 216, 0.26);
+    }
+
+    .app-action-btn.primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(21, 101, 216, 0.34);
+    }
+
+    .app-action-btn.secondary {
+      background: #fff;
+      color: var(--primary);
+      border-color: var(--primary);
+      box-shadow: 0 10px 22px rgba(21, 101, 216, 0.08);
+    }
+
+    .app-action-btn.secondary:hover {
+      background: rgba(21, 101, 216, 0.04);
+      transform: translateY(-2px);
+    }
+
+    .application-note {
+      max-width: 760px;
+      margin: 0 auto 10px;
+      text-align: center;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      padding: 0 10px;
+    }
+
+    .application-note strong {
+      color: var(--secondary);
+    }
+
     .contact-info-card {
       display: flex;
       align-items: flex-start;
@@ -1485,7 +1550,7 @@
       <div class="badge-logo">
 
         <!-- UPDATED: real school badge photo replacing the SVG seal -->
-        <img class="school-badge-svg" src="assets/badge.jpeg" alt="Antonia's Learning &amp; Beauty Centre Official Badge" width="60" height="60" fetchpriority="low">
+        <img class="school-badge-svg" src="assets/badge.jpeg" alt="Antonias's Learning &amp; Beauty Centre Official Badge" width="60" height="60" fetchpriority="low">
         <!-- Updated Title with "Learning &" -->
         <div class="brand-name">ANTONIAS<br><span style="font-size:0.78rem; font-weight:600; color:var(--primary);">Learning &amp; Beauty Centre</span></div>
       </div>
@@ -1824,7 +1889,7 @@
         <button type="button" class="btn btn-block btn-pay-wa" onclick="sendSupportBankProof()">Send Deposit Proof Via WhatsApp</button>
       </div>
 
-      <p class="support-note">Prefer to talk first? <a href="https://wa.me/256705505474?text=Hello%20Antonia's%20Learning%20%26%20Beauty%20Centre%2C%20I%20would%20like%20to%20know%20more%20about%20supporting%20your%20skilling%20centre." target="_blank" style="color:var(--primary); font-weight:600;">Message us on WhatsApp</a></p>
+      <p class="support-note">Prefer to talk first? <a href="https://wa.me/256705505474?text=Hello%20Antonias Learning and Beauty Centre%2C%20I%20would%20like%20to%20know%20more%20about%20supporting%20your%20skilling%20centre." target="_blank" style="color:var(--primary); font-weight:600;">Message us on WhatsApp</a></p>
     </div>
   </div>
 
@@ -1832,9 +1897,9 @@
   <section class="section-padding container" id="about">
     <div class="about-wrapper">
       <div class="about-img-box bounce-in">
-        <img src="assets/salon A.jpeg" alt="Antonia Salon Interior" loading="lazy">
+        <img src="assets/salon A.jpeg" alt="Antonias Salon Interior" loading="lazy">
         <!-- ADDED: second image that fades in on hover (see CSS .about-img-alt / JS hover listener) -->
-        <img class="about-img-alt" src="assets/poster A.jpeg" alt="Antonia Salon Students at Work" loading="lazy">
+        <img class="about-img-alt" src="assets/poster A.jpeg" alt="Antonias Salon Students at Work" loading="lazy">
         <div class="about-experience-badge">
           Empowering<br>Girl Child
         </div>
@@ -2199,6 +2264,19 @@
     </div>
   </section>
 
+  <!-- APPLICATION FORM SECTION -->
+  <section class="section-padding container" id="application-form">
+    <div class="section-title bounce-in">
+      <h2>View or Download the Application Form Below to Secure Your Place With Us</h2>
+      <p style="color: var(--secondary);">Start your journey with Antonia's Learning and Beauty Centre today.</p>
+    </div>
+    <div class="application-links bounce-in">
+      <a class="app-action-btn primary" href="https://pub-f9aab72c5a7a45ae97577474af49f334.r2.dev/Application%20form.pdf" target="_blank" rel="noopener"><i class="fas fa-arrow-right"></i> <span>View Application</span></a>
+      <a class="app-action-btn secondary" href="https://pub-f9aab72c5a7a45ae97577474af49f334.r2.dev/Application%20form.pdf" download><i class="fas fa-arrow-down"></i> <span>Download Application</span></a>
+    </div>
+    <p class="application-note">After downloading the application form, please print it, fill it in, then scan and send it to <strong>antoniaslearningbeautycentre@gmail.com</strong>.</p>
+  </section>
+
   <!-- CONTACT SECTION -->
   <section class="section-padding container" id="contact">
     <div class="section-title bounce-in">
@@ -2272,7 +2350,7 @@
 
   <!-- FLOATING CTA BUTTONS -->
   <div class="floating-buttons">
-    <a href="https://wa.me/256705505474?text=Hello%20Antonia%20Learning%20and%20Beauty%20Centre,%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" class="float-btn float-whatsapp" aria-label="WhatsApp Us">
+    <a href="https://wa.me/256705505474?text=Hello%20Antonias Learning and Beauty Centre,%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" class="float-btn float-whatsapp" aria-label="WhatsApp Us">
       <i class="fab fa-whatsapp"></i>
     </a>
     <a href="tel:0781704061" class="float-btn float-call" aria-label="Call Us">
